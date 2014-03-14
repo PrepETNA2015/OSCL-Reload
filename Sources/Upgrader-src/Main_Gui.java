@@ -96,7 +96,7 @@ public class Main_Gui extends JFrame{
                 try {                    
                     downloadFile(getDownloadLinkFromHost());
                     unzip();
-                    copyFiles(new File("/tmp/Open-Source-License-Chechker-Reloaded-master"),path);
+                    copyFiles(new File("/tmp/OSCL-Reload-master"),path);
                     launch.setEnabled(true);
                     outText.setText(outText.getText()+"\nUpdate Finished!");
                 } catch (Exception ex) {
