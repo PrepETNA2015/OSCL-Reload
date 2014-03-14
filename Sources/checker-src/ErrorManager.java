@@ -32,7 +32,7 @@ public class ErrorManager {
 		Log.log(LogEntry.ERROR, errorDescription);
 		for (StackTraceElement e : Thread.currentThread().getStackTrace()) {
 			Log.log(LogEntry.ERROR, e.toString());
-		}
+                }
 		System.exit(0);
 	}
 	

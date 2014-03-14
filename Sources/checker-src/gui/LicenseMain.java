@@ -42,7 +42,7 @@ import javax.swing.JComponent;
 
 import checker.localization.*;
 
-import org.jdesktop.swingworker.SwingWorker; 
+import org.jdesktop.swingworker.SwingWorker;
 
 import checker.ErrorManager;
 import checker.FileID;
@@ -874,11 +874,11 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         treePanel = new javax.swing.JPanel();
         filterCombo = new javax.swing.JComboBox();
         referencesBox = new javax.swing.JCheckBox();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        licenseTree = new checker.gui.tree.LicenseTree();
         criteriaButton = new javax.swing.JButton();
         rightPanel = new javax.swing.JPanel();
         tabbedPane = new javax.swing.JTabbedPane();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        licenseTree = new checker.gui.tree.LicenseTree();
         toolBar = new javax.swing.JToolBar();
         openButton = new javax.swing.JButton();
         firstButton = new javax.swing.JButton();
@@ -947,7 +947,7 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
             }
         });
 
-        closeTabItem.setText(loc.lc("Close File"));
+        closeTabItem.setText("Close File");
         closeTabItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 closeTabItemActionPerformed(evt);
@@ -956,7 +956,7 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         tabPopup.add(closeTabItem);
         tabPopup.add(jSeparator3);
 
-        printTabItem.setText(loc.lc("Print File"));
+        printTabItem.setText("Print File");
         printTabItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 printTabItemActionPerformed(evt);
@@ -964,24 +964,24 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         });
         tabPopup.add(printTabItem);
 
-        prefsDialog.setTitle(loc.lc("Preferences"));
+        prefsDialog.setTitle("Preferences");
         prefsDialog.setModal(true);
 
-        prefsCancel.setText(loc.lc("Cancel"));
+        prefsCancel.setText("Cancel");
         prefsCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 prefsCancelActionPerformed(evt);
             }
         });
 
-        prefsOk.setText(loc.lc("OK"));
+        prefsOk.setText("OK");
         prefsOk.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 prefsOkActionPerformed(evt);
             }
         });
 
-        prefsLabel.setText(loc.lc("Nothing here yet..."));
+        prefsLabel.setText("Nothing here yet...");
 
         org.jdesktop.layout.GroupLayout prefsPanelLayout = new org.jdesktop.layout.GroupLayout(prefsPanel);
         prefsPanel.setLayout(prefsPanelLayout);
@@ -1022,7 +1022,7 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         );
 
         processDialog.setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
-        processDialog.setTitle(loc.lc("Processing files"));
+        processDialog.setTitle("Processing files");
         processDialog.setModal(true);
         processDialog.setResizable(false);
         processDialog.addWindowListener(new java.awt.event.WindowAdapter() {
@@ -1031,9 +1031,9 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
             }
         });
 
-        processLabel.setText(loc.lc("Please wait."));
+        processLabel.setText("Please wait.");
 
-        processCancel.setText(loc.lc("Cancel"));
+        processCancel.setText("Cancel");
         processCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 processCancelActionPerformed(evt);
@@ -1065,16 +1065,16 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        overviewDialog.setTitle(loc.lc("Details"));
+        overviewDialog.setTitle("Details");
 
-        overviewDlgPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(loc.lc("Package Overview")));
+        overviewDlgPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Package Overview"));
 
         matchesTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                loc.lc("License"), "Count", "Max %"
+                "License", "Count", "Max %"
             }
         ) {
             Class[] types = new Class [] {
@@ -1094,7 +1094,7 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         });
         matchesPane.setViewportView(matchesTable);
 
-        overviewDlgPane.addTab(loc.lc("Matches"), matchesPane);
+        overviewDlgPane.addTab("Matches", matchesPane);
 
         conflictsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1117,14 +1117,14 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
             .add(conflictsPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 285, Short.MAX_VALUE)
         );
 
-        overviewDlgPane.addTab(loc.lc("Conflicts (global)"), conflictsPanel);
+        overviewDlgPane.addTab("Conflicts (global)", conflictsPanel);
 
         copyrightedFilesTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                loc.lc("File name"), "File path", "Copyright holder"
+                "File name", "File path", "Copyright holder"
             }
         ) {
             Class[] types = new Class [] {
@@ -1144,7 +1144,7 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         });
         copyrightedFilesPane.setViewportView(copyrightedFilesTable);
 
-        overviewDlgPane.addTab(loc.lc("Copyrighted files"), copyrightedFilesPane);
+        overviewDlgPane.addTab("Copyrighted files", copyrightedFilesPane);
 
         nonCopyrightedFilesTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1156,14 +1156,14 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         ));
         nonCopyrightedFilesPane.setViewportView(nonCopyrightedFilesTable);
 
-        overviewDlgPane.addTab(loc.lc("Non-copyrighted files"), nonCopyrightedFilesPane);
+        overviewDlgPane.addTab("Non-copyrighted files", nonCopyrightedFilesPane);
 
         copyrightHoldersTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                loc.lc("Copyright holder"), "Number of files"
+                "Copyright holder", "Number of files"
             }
         ) {
             Class[] types = new Class [] {
@@ -1183,7 +1183,7 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         });
         copyrightHoldersPane.setViewportView(copyrightHoldersTable);
 
-        overviewDlgPane.addTab(loc.lc("Copyright holders"), copyrightHoldersPane);
+        overviewDlgPane.addTab("Copyright holders", copyrightHoldersPane);
 
         org.jdesktop.layout.GroupLayout overviewDlgPanelLayout = new org.jdesktop.layout.GroupLayout(overviewDlgPanel);
         overviewDlgPanel.setLayout(overviewDlgPanelLayout);
@@ -1207,15 +1207,15 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
             .add(overviewDlgPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        aboutDialog.setTitle(loc.lc("About OSLC"));
+        aboutDialog.setTitle("About OSLC");
 
-        aboutLabel1.setText(loc.lc("Open Source License Checker"));
+        aboutLabel1.setText("Open Source License Checker");
 
-        aboutLabel2.setText("version 3.0, 2009");
+        aboutLabel2.setText("version 2.0, 2007");
 
         aboutTextPane.setContentType("text/html");
         aboutTextPane.setEditable(false);
-        aboutTextPane.setText("<html>\n<p>This software is released under GPL 2.0 license.</p>\nJing Jing-Helles<br>\nSakari Kï¿½ï¿½riï¿½inen<br>\nYuan Yuan<br>\nLauri Koponen<br>\nVeli-Jussi Raitila<br>\nMika Rajanen<br>\nXie Xiaolei<br>\nJussi Sirpoma<br>\nMikko Kupsu<br>\nEetu Jalonen<br>\nJyrki Laine<br>\nJohannes Heikkinen<br>\nEero Kurkela<br>\nTuomo Jorri<br>\nLasse Parikka<br>\n</p>\n<p>\nFor more info about the application:<br>\n<a href=\"http://forge.objectweb.org/projects/oslcv3/\">http://forge.objectweb.org/projects/oslcv3/</a><br>\n</p>\n<p>\nThis project is created for the T-76.4115 course in<br>\nSoftware Engineering and Business lab, <br>\nin Computer Science and Engineering department <br>\nof Helsinki University of Technology<br>\n</p>\n<p>\nSpecial thanks to Prof. Juha Laine, Ville Oksanen, Seppo Sahi, Jari Vanhanen and Ossi Syd<br>\nfor guiding us throughout the project.<br>\n</p>\n</html>\n");
+        aboutTextPane.setText("<html>\n<p>This software is released under GPL 2.0 license.</p>\n<p>This application uses:</p>\n<ul>\n<li>the Silk icon set by Mark James <a href=\"http://www.famfamfam.com/\">http://www.famfamfam.com</a> released under a Creative Commons Attribution 2.5 License</li>\n<li>javatar-2.5 tar file reader by Timothy Gerard Endres <a href=\"mailto:time@gjt.org\">time@gjt.org</a> <a href=\"http://www.trustice.com\">http://www.trustice.com</a> under public domain license</li>\n</ul>\n<p>Creditors:<br>\nJing Jing-Helles<br>\nSakari Kääriäinen<br>\nYuan Yuan<br>\nLauri Koponen<br>\nVeli-Jussi Raitila<br>\nMika Rajanen<br>\nXie Xiaolei<br>\nJussi Sirpoma<br>\n</p>\n<p>\nFor more info about the application:<br>\n<a href=\"http://sourceforge.net/projects/oslc/\">http://sourceforge.net/projects/oslc/</a><br>\n</p>\n<p>\nThis project is created for the T-76.4115 course in<br>\nSoftware Engineering and Business lab, <br>\nin Computer Science and Engineering department <br>\nof Helsinki University of Technology<br>\n</p>\n<p>\nSpecial thanks to Prof. Juha Laine, Ville Oksanen and Seppo Sahi<br>\nfor guiding us throughout the project.<br>\n</p>\n</html>\n");
         aboutScrollPane.setViewportView(aboutTextPane);
 
         org.jdesktop.layout.GroupLayout aboutDialogLayout = new org.jdesktop.layout.GroupLayout(aboutDialog.getContentPane());
@@ -1242,9 +1242,9 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
                 .addContainerGap())
         );
 
-        criteriaDialog.setTitle(loc.lc("Choose Criteria"));
+        criteriaDialog.setTitle("Choose Criteria");
 
-        criteriaCombo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { loc.lc("All") }));
+        criteriaCombo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "All" }));
         criteriaCombo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 criteriaComboActionPerformed(evt);
@@ -1268,10 +1268,10 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        helpFrame.setTitle(loc.lc("OSLC Help"));
+        helpFrame.setTitle("OSLC Help");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle(loc.lc("OSLC v3.0"));
+        setTitle("OSLC v3.0");
 
         mainPanel.setLayout(new java.awt.BorderLayout());
 
@@ -1280,45 +1280,45 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         splitPane.setDividerSize(8);
         splitPane.setResizeWeight(0.25);
 
-        overviewPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(loc.lc("Overview")));
+        overviewPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Overview"));
         overviewPanel.setLayout(new java.awt.GridLayout(8, 2, -100, 10));
 
-        overviewLabel1.setText(loc.lc("Source Files"));
+        overviewLabel1.setText("Source Files");
         overviewPanel.add(overviewLabel1);
 
         srcCountLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         srcCountLabel.setText("<html><font color=\"gray\">0</font></html>");
         overviewPanel.add(srcCountLabel);
 
-        overviewLabel2.setText(loc.lc("All Files"));
+        overviewLabel2.setText("All Files");
         overviewPanel.add(overviewLabel2);
 
         allCountLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         allCountLabel.setText("<html><font color=\"gray\">0</font></html>");
         overviewPanel.add(allCountLabel);
 
-        overviewLabel3.setText(loc.lc("Distinct Licenses"));
+        overviewLabel3.setText("Distinct Licenses");
         overviewPanel.add(overviewLabel3);
 
         disLicCountLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         disLicCountLabel.setText("<html><font color=\"gray\">0</font></html>");
         overviewPanel.add(disLicCountLabel);
 
-        overviewLabel4.setText(loc.lc("Conflicts (reference)"));
+        overviewLabel4.setText("Conflicts (reference)");
         overviewPanel.add(overviewLabel4);
 
         confRefCountLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         confRefCountLabel.setText("<html><font color=\"gray\">0</font></html>");
         overviewPanel.add(confRefCountLabel);
 
-        overviewLabel5.setText(loc.lc("Conflicts (global)"));
+        overviewLabel5.setText("Conflicts (global)");
         overviewPanel.add(overviewLabel5);
 
         confGblCountLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         confGblCountLabel.setText("<html><font color=\"gray\">0</font></html>");
         overviewPanel.add(confGblCountLabel);
 
-        overviewLabel7.setText(loc.lc("Copyrighted Files"));
+        overviewLabel7.setText("Copyrighted Files");
         overviewPanel.add(overviewLabel7);
 
         copyrFilesCountLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -1326,7 +1326,7 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         overviewPanel.add(copyrFilesCountLabel);
 
         overviewLabel6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        overviewLabel6.setText(loc.lc("Copyright Holders"));
+        overviewLabel6.setText("Copyright Holders");
         overviewPanel.add(overviewLabel6);
 
         copyrHoldersCountLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -1335,7 +1335,7 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         overviewPanel.add(jLabel1);
 
         overviewHyperLink.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        overviewHyperLink.setText(loc.lc("Details..."));
+        overviewHyperLink.setText("Details...");
         overviewHyperLink.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 overviewHyperLinkMouseClicked(evt);
@@ -1343,9 +1343,9 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         });
         overviewPanel.add(overviewHyperLink);
 
-        treePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(loc.lc("Filter")));
+        treePanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Filter"));
 
-        filterCombo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { loc.lc("All Files"), loc.lc("Conflicting Files"), loc.lc("Missing Licenses"), loc.lc("Licensed Files"), loc.lc("Uncertain Licenses") }));
+        filterCombo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "All Files", "Conflicting Files", "Missing Licenses", "Licensed Files", "Uncertain Licenses" }));
         filterCombo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 filterComboActionPerformed(evt);
@@ -1353,7 +1353,7 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         });
 
         referencesBox.setSelected(true);
-        referencesBox.setText(loc.lc("Show References"));
+        referencesBox.setText("Show References");
         referencesBox.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
         referencesBox.setMargin(new java.awt.Insets(0, 0, 0, 0));
         referencesBox.addItemListener(new java.awt.event.ItemListener() {
@@ -1362,19 +1362,7 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
             }
         });
 
-        licenseTree.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                licenseTreeKeyPressed(evt);
-            }
-        });
-        licenseTree.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                licenseTreeMouseClicked(evt);
-            }
-        });
-        jScrollPane1.setViewportView(licenseTree);
-
-        criteriaButton.setText(loc.lc("Choose..."));
+        criteriaButton.setText("Choose...");
         criteriaButton.setEnabled(false);
         criteriaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1390,10 +1378,9 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
                 .add(referencesBox, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 168, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .add(org.jdesktop.layout.GroupLayout.TRAILING, treePanelLayout.createSequentialGroup()
-                .add(filterCombo, 0, 95, Short.MAX_VALUE)
+                .add(filterCombo, 0, 80, Short.MAX_VALUE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(criteriaButton))
-            .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE)
         );
         treePanelLayout.setVerticalGroup(
             treePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -1401,9 +1388,7 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
                 .add(treePanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(criteriaButton)
                     .add(filterCombo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 355, Short.MAX_VALUE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 367, Short.MAX_VALUE)
                 .add(referencesBox))
         );
 
@@ -1427,15 +1412,33 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         tabbedPane.setBorder(javax.swing.BorderFactory.createEmptyBorder(3, 3, 3, 3));
         tabbedPane.setComponentPopupMenu(tabPopup);
 
+        licenseTree.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                licenseTreeKeyPressed(evt);
+            }
+        });
+        licenseTree.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                licenseTreeMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(licenseTree);
+
+        tabbedPane.addTab("tab1", jScrollPane1);
+
         org.jdesktop.layout.GroupLayout rightPanelLayout = new org.jdesktop.layout.GroupLayout(rightPanel);
         rightPanel.setLayout(rightPanelLayout);
         rightPanelLayout.setHorizontalGroup(
             rightPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(tabbedPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 490, Short.MAX_VALUE)
+            .add(rightPanelLayout.createSequentialGroup()
+                .add(tabbedPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 490, Short.MAX_VALUE)
+                .add(24, 24, 24))
         );
         rightPanelLayout.setVerticalGroup(
             rightPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(tabbedPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 632, Short.MAX_VALUE)
+            .add(rightPanelLayout.createSequentialGroup()
+                .add(tabbedPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 605, Short.MAX_VALUE)
+                .add(24, 24, 24))
         );
 
         splitPane.setRightComponent(rightPanel);
@@ -1510,16 +1513,16 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         statusPanel.setLayout(new java.awt.BorderLayout());
         statusPanel.add(statusBar, java.awt.BorderLayout.EAST);
 
-        statusLabel.setText(loc.lc("Ready"));
+        statusLabel.setText("Ready");
         statusPanel.add(statusLabel, java.awt.BorderLayout.WEST);
 
         mainPanel.add(statusPanel, java.awt.BorderLayout.SOUTH);
 
         fileMenu.setMnemonic('F');
-        fileMenu.setText(loc.lc("File"));
+        fileMenu.setText("File");
 
         openItem.setMnemonic('O');
-        openItem.setText(loc.lc("Open..."));
+        openItem.setText("Open...");
         openItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 openItemActionPerformed(evt);
@@ -1528,7 +1531,7 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         fileMenu.add(openItem);
 
         closeItem.setMnemonic('C');
-        closeItem.setText(loc.lc("Close"));
+        closeItem.setText("Close");
         closeItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 closeItemActionPerformed(evt);
@@ -1537,7 +1540,7 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         fileMenu.add(closeItem);
 
         closeAllItem.setMnemonic('A');
-        closeAllItem.setText(loc.lc("Close All"));
+        closeAllItem.setText("Close All");
         closeAllItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 closeAllItemActionPerformed(evt);
@@ -1547,7 +1550,7 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         fileMenu.add(jSeparator1);
 
         printItem.setMnemonic('P');
-        printItem.setText(loc.lc("Print..."));
+        printItem.setText("Print...");
         printItem.setEnabled(false);
         printItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1557,7 +1560,7 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         fileMenu.add(printItem);
         fileMenu.add(jSeparator7);
 
-        exportItem.setText(loc.lc("Export report..."));
+        exportItem.setText("Export report...");
         exportItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exportItemActionPerformed(evt);
@@ -1566,7 +1569,7 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         fileMenu.add(exportItem);
         fileMenu.add(jSeparator2);
 
-        svnCheckoutItem.setText(loc.lc("Checkout From SVN..."));
+        svnCheckoutItem.setText("Checkout From SVN...");
         svnCheckoutItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 svnCheckoutItemActionPerformed(evt);
@@ -1574,7 +1577,7 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         });
         fileMenu.add(svnCheckoutItem);
 
-        cvsCheckoutItem.setText(loc.lc("Checkout From CVS..."));
+        cvsCheckoutItem.setText("Checkout From CVS...");
         cvsCheckoutItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cvsCheckoutItemActionPerformed(evt);
@@ -1584,7 +1587,7 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         fileMenu.add(jSeparator4);
 
         quitItem.setMnemonic('u');
-        quitItem.setText(loc.lc("Quit"));
+        quitItem.setText("Quit");
         quitItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 quitItemActionPerformed(evt);
@@ -1595,11 +1598,11 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         menuBar.add(fileMenu);
 
         viewMenu.setMnemonic('V');
-        viewMenu.setText(loc.lc("View"));
+        viewMenu.setText("View");
 
         overviewBox.setMnemonic('v');
         overviewBox.setSelected(true);
-        overviewBox.setText(loc.lc("Show Overview"));
+        overviewBox.setText("Show Overview");
         overviewBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 overviewBoxActionPerformed(evt);
@@ -1608,7 +1611,7 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         viewMenu.add(overviewBox);
 
         wrapBox.setMnemonic('W');
-        wrapBox.setText(loc.lc("Word Wrap"));
+        wrapBox.setText("Word Wrap");
         wrapBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 wrapBoxActionPerformed(evt);
@@ -1618,10 +1621,10 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
 
         menuBar.add(viewMenu);
 
-        optionsMenu.setText(loc.lc("Options"));
+        optionsMenu.setText("Options");
         optionsMenu.setEnabled(false);
 
-        prefsItem.setText(loc.lc("Preferences"));
+        prefsItem.setText("Preferences");
         prefsItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 prefsItemActionPerformed(evt);
@@ -1632,9 +1635,9 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         menuBar.add(optionsMenu);
 
         toolsMenu.setMnemonic('T');
-        toolsMenu.setText(loc.lc("Tools"));
+        toolsMenu.setText("Tools");
 
-        addLicenseItem.setText(loc.lc("Add new license..."));
+        addLicenseItem.setText("Add new license...");
         addLicenseItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addLicenseItemActionPerformed(evt);
@@ -1642,7 +1645,7 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         });
         toolsMenu.add(addLicenseItem);
 
-        editLicenseItem.setText(loc.lc("Edit license..."));
+        editLicenseItem.setText("Edit license...");
         editLicenseItem.setEnabled(false);
         editLicenseItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1651,7 +1654,7 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         });
         toolsMenu.add(editLicenseItem);
 
-        delLicenseItem.setText(loc.lc("Delete license..."));
+        delLicenseItem.setText("Delete license...");
         delLicenseItem.setEnabled(false);
         delLicenseItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1660,7 +1663,7 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         });
         toolsMenu.add(delLicenseItem);
 
-        compatibleLicenseItem.setText(loc.lc("List compatible licenses..."));
+        compatibleLicenseItem.setText("List compatible licenses...");
         compatibleLicenseItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 compatibleLicenseItemActionPerformed(evt);
@@ -1669,7 +1672,7 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         toolsMenu.add(compatibleLicenseItem);
         toolsMenu.add(jSeparator6);
 
-        downloadDatabaseItem.setText(loc.lc("Download license database..."));
+        downloadDatabaseItem.setText("Download license database...");
         downloadDatabaseItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 downloadDatabaseItemActionPerformed(evt);
@@ -1678,7 +1681,7 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         toolsMenu.add(downloadDatabaseItem);
         toolsMenu.add(jSeparator8);
 
-        langItem.setText(loc.lc("Select language"));
+        langItem.setText("Select language");
         langItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 langItemActionPerformed(evt);
@@ -1686,7 +1689,7 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         });
         toolsMenu.add(langItem);
 
-        newLangItem.setText(loc.lc("Create new language file"));
+        newLangItem.setText("Create new language file");
         newLangItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 newLangItemActionPerformed(evt);
@@ -1697,9 +1700,9 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         menuBar.add(toolsMenu);
 
         helpMenu.setMnemonic('H');
-        helpMenu.setText(loc.lc("Help"));
+        helpMenu.setText("Help");
 
-        helpItem.setText(loc.lc("Help Contents"));
+        helpItem.setText("Help Contents");
         helpItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 helpItemActionPerformed(evt);
@@ -1708,7 +1711,7 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         helpMenu.add(helpItem);
         helpMenu.add(jSeparator5);
 
-        aboutItem.setText(loc.lc("About OSLC"));
+        aboutItem.setText("About OSLC");
         aboutItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 aboutItemActionPerformed(evt);
@@ -1724,7 +1727,7 @@ public class LicenseMain extends javax.swing.JFrame implements LicenseProcessLis
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(mainPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
+            .add(mainPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 724, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)

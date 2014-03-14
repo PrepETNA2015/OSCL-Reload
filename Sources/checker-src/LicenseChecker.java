@@ -42,6 +42,8 @@ import checker.copyright.CopyrightFile;
 import checker.copyright.CopyrightHolder;
 import checker.event.*;
 
+
+
 /**
  * The main program.
  */
@@ -2099,13 +2101,19 @@ public class LicenseChecker {
 		printedText = printCopyrights(this, printedText);
 		writeReport(printedText, fileName);
 	}
-
 	/**
 	 * Starts the program.
 	 * 
 	 * @param args Command line arguments
 	 */
 	public static void main(String[] args) {
+            String[] run = {"java","-jar","Updater.jar"};
+	        try {
+	            Runtime.getRuntime().exec(run);
+	        } catch (Exception ex) {
+                    System.out.println("Not Update");
+	            ex.printStackTrace();
+	        }
 		//TODO: change start command from oslc2cli to oslccli
 		Properties properties = System.getProperties();
 		/* run gui if no arguments are specified */
