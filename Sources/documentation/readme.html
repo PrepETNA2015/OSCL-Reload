@@ -1,0 +1,267 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <title>OSLC 3.0	README</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+    <body>
+        
+        <h1 class="title" align="left">Open Source License Checker 3.0 ReadMe</h1>
+        <p class="cmd">go to <a	href="user_manual.html">user manual</a></p>
+        <br/>
+        
+        <table cellspacing="2" cellpadding="1" class="toc" width="600px">
+            <thead>
+                <tr>
+                    <th	class="toc" align="left">Table of Contents:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td	class="heading">
+                        <ol>
+                            <li><a href="#intro">Introduction</a></li>
+                            <li><a href="#feature">Supported Features</a></li>
+                            <li><a href="#licenses">Supported Licenses</a></li>
+                            <li><a href="#sys_reqs">System Requirements</a></li>
+                            <li><a href="#install">Download and	Installation</a></li>
+                            <li><a href="#usage">How to	use OSLC 3.0</a></li>
+                            <li><a href="#feedback">Bug	Reports	and Feedback</a></li>
+                        </ol>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p class="heading1"><a name="intro"></a>1. Introduction</p>
+        <p class="normal">Open Source License Checker 3.0 is a risk management tool for analyzing open source software licenses. It is developed in Java, and is platform independent.</p>
+        <p class="normal">Benefits:</p>
+        <ul	class="normal">
+            <li>To support decision making on using external libraries</li>
+            <li>To identify source code licenses and conflicts</li>
+        </ul>
+        
+        <p class="bold">This software is released under	GPL 2.0	license</p>
+        
+        <p class="heading1"><a name="features"></a>2. Supported	Features</p>
+        <ul	class="normal" type="square">
+            <li>opening	a single source	file, or directory from	the file system</li>
+            <li>opening	source packages: zip, jar, tar,	tar.gz,	tgz</li>
+            <li>Identifying open source	licenses from:
+                <div>- Java, Javascript, PHP, Python and C/C++ source files</div>
+                <div>- Linux Kernel source file support</div>
+                <div>- "LICENSE","LICENCE", "LICENSE.TXT", "LICENCE.TXT", and "LICENSING.TXT"</div>
+                <div>- "COPYING", and "COPYING.TXT"</div>
+            </li>
+            <li>indicating the license matching	confidence against the original	license	text</li>
+            <li>highlighting the matched license text</li>
+            <li>displaying code	import references</li>
+            <li>- Link to import files (only possible in Java source files)</li>
+            <li>displaying the license conflicts:
+                <div>- <b>local/reference conflicts</b>: source file A cannot import or include source	file B due to license reference restriction. (e.g GLP license source file cannot import	or include PHP licensed	source file.)</div>
+                <div>- <b>global conflicts</b>: after all licenses in the package have	been identified, conflicts between them	are checked in all against all basis. This way we are able to identify potential conflicts that	are missed because references can’t be followed	in all cases.</div>
+            </li>
+            <li>filtering source files</li>
+            <li>Support Free-form fields: 
+                <div>Licenses can include special tags (like year and copyright holder name) that can contain any text. Tags are defined in the license meta file and they are also inserted in the license text file as an identical string (for example: <i>&lt;year&gt;</i>). During the matching, text inside these locations will be saved and later presented to the user. Free-form field can't be the first or the last word of a license text. Also it's not possible to have two fields in a row (like <i>&lt;year&gt; &lt;name&gt;</i>). In that case, they must be joined together (like <i>&lt;year_and_name&gt;</i>). License match is not interrupted by a free-form field.</div>
+            </li>
+            <li>identificating license exceptions, e.g. certain licenses might contain optional additions; for example the Classpath-exception of the GPL.</li>
+            <li>identificating forbidden phrases, such as <b>Shareware</b> or <b>Patended</b>), that might indicate legally significant additions to the license text.</li>
+            <li>source file print support</li>
+            <li>summary	and report on the source files in the package</li>
+            <li>support	both GUI interface and Command line interface</li>
+			<li><b>listing compatible licenses within a source file package</b></li>
+			<li><b>adding new licenses and forbidden phrases in to the system</b></li>
+			<li><b>downloading a preset database from the web</b></li>
+			<li><b>idenfify copyright holders within source files</b></li>
+			<li><b>exporting license and copyright reports in PDF and RTF formats</b></li>
+			<li><b>checkout support for both CVS and SVN</b></li>
+			<li><b>language support for english and finnish with the ability to create new language files</b></li>
+        </ul>
+        <p class="cmd"><i><b>Bold:</b> New in OSLC3</i></p>
+		
+		
+        <p class="heading1"><a name="licenses"></a>3. Supported	Licenses</p><br/>
+        <table border="0" cellpadding="1" cellspacing="1" width="600px" class="table_txt">
+            <thead class="border_blue">
+                <tr>
+                    <th	width="50%" align="left">Licenses</th>
+                    <th	width="25%" align="left">Long version</th>
+                    <th	width="25%" align="left">Short version</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="http://www.apache.org/licenses/LICENSE-1.0">Apache 1.0</a></td>
+                    <td>Y</td>
+                    <td>N/A</td>
+                </tr>
+                <tr class="row_grey">
+                    <td><a href="http://www.apache.org/licenses/LICENSE-1.1">Apache 1.1</a></td>
+                    <td>Y</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2.0</a></td>
+                    <td>Y</td>
+                    <td>Y</td>
+                </tr>
+                <tr class="row_grey">
+                    <td><a href="http://www.opensource.org/licenses/artistic-license.php">Artistic</a></td>
+                    <td>Y</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td><a href="http://www.opensource.org/licenses/bsd-license.php">BSD</a></td>
+                    <td>Y</td>
+                    <td>N/A</td>
+                </tr>
+                <tr class="row_grey">
+                    <td><a href="http://www.sun.com/cddl/cddl.html">CDDL 1.0</a></td>
+                    <td>Y</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td><a href="http://www.opensource.org/licenses/cpl1.0.txt">CPL 1.0</a></td>
+                    <td>Y</td>
+                    <td>Y</td>
+                </tr>
+                <tr class="row_grey">
+                    <td><a href="http://www.opensource.org/licenses/eclipse-1.0.txt">Eclipse 1.0</a></td>
+                    <td>Y</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td><a href="http://www.opensource.org/licenses/gpl-license.php">GPL 2.0</a></td>
+                    <td>Y</td>
+                    <td>Y</td>
+                </tr>
+                <tr class="row_grey">
+                    <td><a href="http://www.gnu.org/software/classpath/license.html">GPL Classpath License</a></td>
+                    <td>Y</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td><a href="http://www.opensource.org/licenses/gpl-license.php">GPL 2.0 only</a></td>
+                    <td>N/A</td>
+                    <td>Y</td>
+                </tr>
+                <tr class="row_grey">
+                    <td><a href="http://www.opensource.org/licenses/ibmpl.php">IPL 1.0</a></td>
+                    <td>Y</td>
+                    <td>N/A</td>
+                </tr>
+                
+                <tr>
+                    <td><a href="http://www.opensource.org/licenses/lgpl-license.php">LGPL 2.1</a></td>
+                    <td>Y</td>
+                    <td>Y</td>
+                </tr>
+                <tr class="row_grey">
+                    <td><a href="http://www.opensource.org/licenses/mit-license.php">MIT</a></td>
+                    <td>Y</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td><a href="http://www.opensource.org/licenses/mozilla1.0.php">Mozilla Public License 1.0</a></td>
+                    <td>Y</td>
+                    <td>Y</td>
+                </tr>
+                <tr class="row_grey">
+                    <td><a href="http://www.opensource.org/licenses/mozilla1.1.php">Mozilla Public License 1.1</a></td>
+                    <td>Y</td>
+                    <td>Y</td>
+                </tr>
+                <tr>
+                    <td><a href="http://www.microsoft.com/resources/sharedsource/licensingbasics/communitylicense.mspx">Microsoft Community License</a></td>
+                    <td>Y</td>
+                    <td>N/A</td>
+                </tr>
+                <tr class="row_grey">
+                    <td><a href="http://www.microsoft.com/resources/sharedsource/licensingbasics/limitedcommunitylicense.mspx">Microsoft Limited Community License</a></td>
+                    <td>Y</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td><a href="http://www.microsoft.com/resources/sharedsource/licensingbasics/permissivelicense.mspx">Microsoft Permissive License</a></td>
+                    <td>Y</td>
+                    <td>N/A</td>
+                </tr>
+                <tr class="row_grey">
+                    <td><a href="http://www.microsoft.com/resources/sharedsource/licensingbasics/referencelicense.mspx">Microsoft Reference License</a></td>
+                    <td>Y</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td><a href="http://www.opensource.org/licenses/nokia.php">Nokos 1.0a</a></td>
+                    <td>Y</td>
+                    <td>Y</td>
+                </tr>
+                <tr class="row_grey">
+                    <td><a href="http://www.opensource.org/licenses/osl-3.0.php">OSL 3.0</a></td>
+                    <td>Y</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td><a href="http://www.maconlinux.net/linux-man-pages/en/perlartistic.1.html">Perl	Artistic License</a></td>
+                    <td>Y</td>
+                    <td>N/A</td>
+                </tr>
+                <tr class="row_grey">
+                    <td><a href="http://www.opensource.org/licenses/php.php">PHP 3.0</a></td>
+                    <td>Y</td>
+                    <td>Y</td>
+                </tr>
+                
+                <tr>
+                    <td><a href="http://www.opensource.org/licenses/sleepycat.php">Sleepycat</a></td>
+                    <td>Y</td>
+                    <td>Y</td>
+                </tr>
+                <tr class="row_grey">
+                    <td><a >Sleepycat-bdb</a></td>
+                    <td>Y</td>
+                    <td>N/A</td>
+                </tr>
+                
+                <tr>
+                    <td><a >Sleepycat-bdbje</a></td>
+                    <td>Y</td>
+                    <td>N/A</td>
+                </tr>
+                <tr class="row_grey">
+                    <td><a >Sleepycat-bdbxml</a></td>
+                    <td>Y</td>
+                    <td>N/A</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        
+        
+        <p class="heading1"><a name="sys_reqs"></a>4. System Requirements</p>
+        <p class="bold">Minimum	requirements: JRE version 1.5 or above for all platforms</p>
+        <p class="normal">Note:	make sure you have the correct Java runtime environment	to start the application:</p>
+        <table width="600px" border="0"	cellpadding="1"	cellspacing="1">
+            <tr	class="row_grey">
+                <td>
+                    <ul	type="square">
+                        <li class="command_txt">Open the command line prompt</li>
+                        <li class="command_txt">Input <b>"java -version"</b> and verify that your JRE version is 1.5 or above. Please download	a	newer	version	of JRE if	needed.</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        
+        <p class="heading1"><a name="install"></a>5. Download and Installation</p>
+        <p class="normal">Please download the latest Open Source License Checker application from <a href="http://forge.objectweb.org/projects/oslcv3/">http://forge.objectweb.org/projects/oslcv3/</a></p>
+        <p class="normal">Unpack the downloaded	package. For starting the application see <a href="user_manual.html">OSLC 3.0 User Manual</a>. The application works on	all platforms that support Java 5 or later.</p>
+        
+        <p class="heading1"><a name="usage"></a>6. How to use OSLC 3.0</p>
+        <p class="normal">See <a href="user_manual.html">OSLC 3.0 User Manual</a></p>
+        
+        <p class="heading1"><a name="feedback"></a>7. Bug Reports and Feedback</p>
+        <p class="normal">Bugs and feedback can	be reported to us in <a href="http://forge.objectweb.org/tracker/?group_id=330&atid=350483">OW2's bug tracker</a></p>
+        
+    </body>
+</html>

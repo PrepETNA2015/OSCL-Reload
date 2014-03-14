@@ -1,0 +1,32 @@
+/* 
+    Document   : style1
+    Created on : February 13, 2007, 4:16 PM
+    Author     : jinghell
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+h1.title { font-family: Verdana, Arial, "lucida console", sans-serif; font-size: 24; }
+.normal { font-family: Verdana, Arial, "lucida console", sans-serif; font-size: 14; }
+.bold { font-family: Verdana, Arial, "lucida console", sans-serif; font-size: 14; font-weight: bold; }
+p.heading1 { font-family: Verdana, Arial, "lucida console", sans-serif; font-size: 20; font-weight: bold; }
+p.heading2 { font-family: Verdana, Arial, "lucida console", sans-serif; font-size: 16; font-weight: bold; }
+
+/* For TOC table properties */
+table.toc { border-style: solid; border-width: 2px; border-color: #3399CC; background-color: #F0F0F0; text-align: left; }
+th.toc { font-family: Verdana, Arial, "lucida console", sans-serif; font-size: 14; font-weight: bold; }
+td.heading { font-family: Verdana, Arial, "lucida console", sans-serif; font-size: 14; text-align: left; }
+
+/* For body table properties */
+.border_blue { border-style: solid; border-width: 0px; border-color: #FFFFFF; background-color: #3399CC; text-align: left; }
+.border_black { border-style: solid; border-width: 0px; border-color: #3399CC; background-color: #F0F0F0; text-align: left; }
+.table_txt { font-family: Verdana, Arial, "lucida console", sans-serif; font-size: 12; }
+.row_grey { background-color: #F0F0F0; }
+.command_txt { background-color: #F0F0F0; font-family: Verdana, Arial, "lucida console", sans-serif; font-size: 12; }
+.cmd { font-family: Verdana, Arial, "lucida console", sans-serif; font-size: 11; }
+

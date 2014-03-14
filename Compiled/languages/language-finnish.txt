@@ -1,0 +1,317 @@
+﻿#checker.gui.LicenseMain
+Opening file:Avataan tiedostoa
+File opened:Tiedosto avattu
+Begin processing files.:Tiedostojen prosessointi aloitettu.
+Processing finished.:Prosessointi päättynyt.
+Processing cancelled.:Prosessonti peruttu.
+Do you want to open a new package? The current one will close.:Haluatko avata uuden paketin? Nykyinen paketti suljetaan.
+Confirm package open:Vahvista paketin avaaminen
+Unpacking files.:Tiedostoja puretaan.
+File contents cannot be shown:Tiedoston sisältöä ei voida näyttää.
+Done:Valmis
+Error inserting file to a tab:Virhe lisättäessä tiedostoa välilehteen
+Error opening package from the GUI:Virhe avattaessa paketti GUI:sta
+Could not generate a tree from the chosen file/dir:Tiedostopuun muodostaminen valitusta tiedostosta/hakemistosta epäonnistui
+Choose Criteria:Valitse kriteeri
+Choose License:Valitse lisenssi
+Choose Match%:Valitse vastaavuus%
+File not found:Tiedostoa ei löytynyt
+Referred file cannot be shown:Viitattua tiedostoa ei voida näyttää
+File cannot be shown:Tiedostoa ei voida näyttää
+File is not viewable:Tiedostoa ei voida näyttää
+HelpSet not found:HelpSetiä ei löytynyt
+Close File:Sulje tiedosto
+Print File:Tulosta tiedosto
+Preferences:Asetukset
+OK:OK
+Nothing here yet...:Täällä ei ole mitään vielä...
+Processing files:Tiedostoja prosessoidaan
+Please wait.:Ole hyvä ja odota
+Details:Yksityiskohdat
+License:Lisenssi
+Count:Määrä
+Matches:Vastaavuuksia
+License 1:Lisenssi 1
+Icon:Ikoni
+License 2:Lisenssi 2
+Conflicts (global):Konfliktit (globaalit)
+About OSLC:OSLC:stä
+Open Source License Checker:Open Source License Checker
+version 3.0, 2008:versio 3.0, 2008
+All:Kaikki
+OSLC Help:OSLC Ohjeet
+OSLC v3.0:OSLC v3.0
+Overview:Yleiskatsaus
+Source Files:Lähdekooditiedostot
+All Files:Kaikki tiedostot
+Distinct Licenses:Lisenssien lkm
+Conflicts (reference):Konfliktit (viitaus)
+Details...:Lisätietoja...
+Filter:Filtteri
+Conflicting Files:Konfliktissa olevat tiedostot
+Missing Licenses:Puuttuvat lisenssit
+Licensed Files:Lisensoidut tiedostot
+Uncertain Licenses:Epävarmat lisenssit
+Show References:Näytä viittaukset
+Choose...:Valitse...
+Close:Sulje
+Close All:Sulje kaikki
+Print...:Tulosta...
+Checkout From CVS...:Lataa CVS:stä...
+Quit:Lopeta
+View:Näkymä
+Show Overview:Näytä yleiskatsaus
+Word Wrap:Word wrap
+Options:Valinnat
+Preferences:Asetukset
+Help:Ohjeet
+Help Contents:Ohjeiden sisältö
+File you selected does not exist:Valitsemaasi tiedostoa ei ole olemassa
+(self):(sisäinen)
+Package Overview:Paketin yleiskatsaus
+Ready:Valmis
+File:Tiedosto
+Open...:Avaa...
+Checkout from SVN:Lataa SVN:stä
+Name of the license here:Lisenssin nimi tähän
+License text here:Lisenssin teksti tähän
+File name:Tiedoston nimi
+File path:Tiedoston polku
+Directory:Hakemisto
+Copyright holder:Tekijänoikeuden haltija
+Copyrighted files:Tekijänoikeuden alaiset tiedostot
+Non-copyrighted files:Ei tekijänoikeuden alaiset tiedostot
+Number of files:Tiedostojen määrä
+Add new license...:Lisää uusi lisenssi...
+Next:Seuraava
+Select compatible licenses...:Valitse yhteensopivat lisenssit...
+Finish:Valmis
+List of all licenses:Lista kaikista lisensseistä
+Select a license and press button to view the compatible licenses.:Valitse lisenssi ja paina nappulaa nähdäksesi yhteensopivat lisenssit
+List compatible licenses:Valitse yhteensopivat lisenssit
+Copyrighted Files:Tekijänoikeuden alaiset tiedostot
+Copyright Holders:Tekijänoikeuksien halijta
+Tools:Työkalut
+List compatible licenses...:Valitse yhteensopivat lisenssit...
+ERROR: license name is null:VIRHE: lisenssin nimi on tyhjä
+License with that name already exists!:Samanniminen lisenssi on jo olemassa!
+Error:Virhe
+Create %s license?:Luo %s lisenssi?
+Add new license?:Lisää uusi lisenssi?
+no row selected:ei valittua riviä
+COMPATIBLE LICENSES WITH %s:\n:YHTEENSOPIVAT LISENSSIT %s KANSSA:\n
+SELECTED LICENSE %s HAS NO COMPATIBLE LICENSES.:VALITULLA LISENSSILLÄ, %s, EI OLE YHTEENSOPIVIA LISENSSEJÄ.
+Chosen license has no compatible licenses:Valitulla lisenssillä ei ole yhteensopivia lisenssejä
+File you selected does not exist:Valittua tiedostoa ei ole olemassa
+Select language:Valitse kieli
+Create new language file:Luo uusi kielitiedosto
+
+#checker.gui.LicenceTab
+This file is missing a license:Tästä tiedostosta puuttuu lisenssi
+This file corresponds to:Tämä tiedosto vastaa
+several licenses:useita lisenssejä
+Error highlighting:Virhe korostuksessa
+This file is not a source file:Tämä tiedosto ei ole lähdekooditiedosto
+License %s conflicts with %s in %s:Lisenssi %s konfliktissa %s kanssa sijainnissa %s
+Details:Lisätietoa
+File Overview:Tiedostojen yleiskatsaus
+Legend:Legenda
+License:Lisenssi
+Match%:Yhtenevyys%
+Matches:Osumia
+Tag:Tagi
+Value:Arvo
+Free Fields:Vapaa kenttä
+Details:Lisätietoa...
+This file has license conflicts (click to show):Tämä tiedostossa on lisenssikonflikti (klikkaa nähdäksesi)
+
+#chekcer.gui.tree.LicenseTree
+No files:Ei tiedostoja
+
+#checker.gui.table.TagTableModel
+
+#checker.gui.table.MatchTableModel
+
+#checker.gui.table.CountTableModel
+Max %:Maksimi %
+
+#checker.gui.ConflictTableRow
+Global:Globaali
+
+#checker.gui.ConflictTableModel
+License 1:Lisenssi 1
+Conflict:Konflikti
+License 2:Lisenssi 2
+
+#checker.gui.filter.MatchCriterion
+less than %1.0f%% match:alle %1.0f%% vastaavuus
+
+#checker.gui.filter.Criteria
+All:Kaikki
+
+#checker.sourceparser.JavaSourceParser
+Reference to the java standard library:Viittaus Javan standardikirjastoon
+Package declaration don't match with source file path:Paketin deklaraatio ei vastaa lähdekooditiedoston polun kanssa
+Package declaration missing:Paketin deklaraatio puuttuu
+Empty import declaration:Tyhjä import deklaraatio
+
+#checker.sourceparser.TemplateSourceParser
+Empty declaration:Tyhjä deklaraatio
+
+#checker.sourceparset.ReferenceProcessing
+Reference points above root directory:Viittaus viittaa ylempään juuritiedostoon
+
+#checker.sourceParser.PHPSourceParser
+Reference to www document:Viittaus www-dokumenttiin
+Reference includes variable:Vitttaus sisältää muuttujan
+Reference include variables e.g. path:Viittaus sisältää muuttujia esim. polun
+
+#checker.sourceParser.CppSourceParser
+Empty include declaration:Tyhjä include-deklaraatio
+
+#cheker.matching.LicenseDatabase
+Abreviation not found.:Lyhennettä ei löytynyt
+License directory file not found:Lisenssihakemistotiedostoa ei löytynyt
+Found license meta file:Löydettiin lisenssin metatiedosto
+Loading license text file:Ladataan lisenssin tekstitiedostoa
+Error while opening license text file:Virhe avattaessa lisenssin tekstitiedostoa
+Loaded license:Lisenssi ladattu
+License text file:Lisenssin tekstitiedosto
+doesn't exist:ei ole olemassa
+is null while its meta exists.:on NULL vaikka sen metatiedosto löytyy
+Error while loading license file:Virhe ladattaessa lisenssiä
+License database loaded:Lisenssitietokanta ladattu
+
+#checker.gui.svn.SVNDirSelector
+Browse repository folders:Selaa säilön kansioita
+Cancel:Peruuta
+Choose the folder(s) you want to checkout from the repository.:Valitse kansiot jotka haluat ladata säilöstä.
+Help:Ohjeet
+
+#checker.gui.svn.CheckoutEvent
+SVN checkout:SVN lataus
+Checked out revision:Ladattu viimeisin revisio
+SVN command failed:SVN käsky epäonnistui
+
+#checker.gui.cvs.CVSCheckoutEvent
+CVS checkout:CVS lataus
+Checking out...:Ladataan...
+Checkout cancelled:Lataus peruttu
+checkout failed:Lataus epäonnistui
+
+#checker.gui.cvs.CVSCheckoutWizard
+Finish:Valmis
+Next:Seuraava
+Back:Takaisin
+CVS root:CVS juuri
+specify the location of CVS repository defined by CVS root.:määrittele CVS juuren määrittämä CVS säilön sijainti. 
+Stop:Seis
+Password:Salasana
+Authentication in progress...:Todennus käynnissä...
+Edit:Editoi
+Module to checkout:Ladattava moduuli
+Specify the CVS module and branch  to checkout from CVS repository.:Määrittele CVS moduuli ja haara joka ladataan CVS säilöstä
+Module:Moduuli
+Branch:Haara
+(empty means all modules):(tyhjä tarkoittaa kaikki moduuleja)
+Browse...:Selaa...
+Specify the local folder to checkout module into.:Määrittele paikallinen kansio johon moduuli ladataan.
+Local folder:Paikallinen kansio
+please check username, password and repository:ole hyvä ja tarkista käyttäjätunnus, salasana ja säilö
+Error:Virhe
+
+#checker.gui.cvs.CVSModuleSelector
+Browse CVS repository:Selaa CVS säilöä
+Aliases:Aliakset
+Pending...:Tulossa...
+Repository contents:Säilön sisältö
+
+#checker.gui.license.AddLicenseWizard
+License name:Lisenssin nimi
+License text:Lisenssin teksti
+License type:Lisenssin tyyppi
+
+#checker.gui.license.EditLicenseWizard
+Edit license:Muokkaa lisenssiä
+Select license:Valitse lisenssi
+
+#checker.gui.license.CompatibleLicenses
+Selected licenses are incompatible:Valitut lisenssit eivät ole yhteensopivia
+<html>Please note that the listed licenses are compatible <br>\nindividually - not necessarily if combined.</html>:<html>Huom! Listatut lisenssit ovat yhteensopivia keskenään<br>\n, eivät välttämättä yhdistettyinä toisiin lisensseihin.</html>
+
+#checker.gui.cvs.SVNCheckoutWizard
+Select All:Valitse kaikki
+Copy:Kopioi
+Paste:Liitä
+Subversion repository:Subversion säilö
+Specify the location of Subversion repository.:Määritä Subversion-säilön sijainti.
+Repository URL:Säilön URL
+Username:Käyttäjätunnus
+(empty means anonymous access):(tyhjä tarkoittaa anonyymia käyttöä)
+Connecting to Subversion repository...:Yhdistetään Subversion säilöön...
+hostname/repository_path:palvelimen_nimi/säilön_polku
+Specify the folder to checkout from Subversion repository.:Määrittele kansio, joka ladataan Subversion säilöstä.
+Repository Folder(s):Säilön kansiot
+Repository revision:Säilön revisio
+Search:Etsi
+Specify the local folder to checkout folders into.:Määrittele paikallinen kansio johon kansiot ladataan
+(empty means repository HEAD):(tyhjä tarkoittaa säilön HEAD:ia)
+repository_path:säilön_polku
+action cancelled by user:käyttäjä keskeytti tapahtuman
+SVN command failed:SVN käsky epäonnistui
+Apply:Käytä
+Enter license name and text:Anna lisenssin nimi ja teksti
+Select compatible licenses:Valitse yhteensopivat lisenssit
+Add new license:Lisää uusi lisenssi
+License name:Lisenssin nimi
+License text:Lisenssin teksti
+License type:Lisenssin tyyppi
+Normal:Normaali
+Short version:Lyhyt versio
+Long version:Pitkä versio
+Forbidden phrase:Kielletty lause
+License:Lisenssi
+Compatible:Yhteensopiva
+Select all:Valiste kaikki
+Select none:Älä valitse mitään
+Invert selection:Käänteinen valinta
+License name is empty:Lisenssin nimi puuttuu
+License text is empty:Lisenssin teksti puuttuu
+Could not generate a tree from the chosen file/dir:Ei voitu luoda puuta valitusta tiedostosta/kansiosta
+Close file:Sulje tiedosto
+Print file:Tulosta tiedosto
+Preferences:Asetukset
+Processing files:Tiedostoja prosessoidaan
+Please wait:Ole hyvä ja odota
+Details:Yksityiskohdat
+Package Overview:Paketin yleisnäkymä
+Matches:Osumat
+Copyright holders:Tekijänoikeuden haltijat
+version 3.0, 2009:versio 3.0, 2009
+Export report...:Tallenna raportti...
+Checkout From SVN...:Lataa SVN:stä...
+Download license database...:Lataa lisenssitietokanta...
+Download license database:Lataa lisenssitietokanta
+Download:Lataa
+Status:Status
+idle:joutilas
+downloading database:Tietokantaa ladataan
+unpacking files:Puretaan tiedostoja
+License database downloaded:Lisenssitietokanta ladattu
+License database could not be downloaded:Lisenssitietokantaa ei voitu ladata
+No package available:Ei pakettia saatavilla
+Select licenses: Valitse lisenssit
+Compatible licenses: Yhteensopivat lisenssit
+Use licenses of current package: Käytä avatun paketin lisenssejä
+Number:MääräEdit license...:Muokkaa lisenssiä...
+Delete license...:Poista lisenssi...
+Folder(s) to checkout:Ladattavat kansiot
+Local Folder:Paikallinen kansio
+Browse:Selaa
+Long Version:Pitkä versio
+Short Version:Lyhyt version
+Forbidden phrase:Kielletty lause
+Select compatible licenses:Valitse yhteensopivat lisenssit
+Create license %s:Luo uusi %s lisenssi
+Save license %s:Tallenna %s lisenssi
+Delete license:Poista lisenssi

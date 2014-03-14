@@ -1,0 +1,407 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <title>OSLC 3.0 User Manual</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+    
+    <body>
+        <h1 class="title" align="left"><a name="top"/>Open Source License Checker 3.0 User Manual</h1>
+        <p class="cmd">go to <a href="readme.html">ReadMe</a></p>
+        <br/>
+        
+        <table cellspacing="2" cellpadding="1" class="toc" width="600px">
+            <thead>
+                <tr>
+                    <th class="toc" align="left">Table of Contents:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="heading">
+                        <ol>
+                            <li><a href="#start">Starting the Application</a></li>
+                            <ol type="i" value="1" dir="LTR" >
+                                <li><a href="#start_1">Start Command Line Operation</a></li>
+                                <li><a href="#start_2">Start GUI Application</a></li>
+                            </ol>
+                            <li><a href="#command">Commandline Guide</a></li>
+                            <li><a href="#gui">GUI Guide</a></li>
+                            <ol type="i" value="1" dir="LTR" >
+                                <li><a href="#gui_1">Open a Source file / Directory / Source package</a></li>
+                                <li><a href="#gui_2">The Summary Pane</a></li>
+                                <li><a href="#gui_3">The Source Tree Browser Pane</a></li>
+                                <li><a href="#gui_4">The File Display Pane</a></li>
+                                <li><a href="#gui_5">Other Options</a></li>
+                            </ol>
+                            <li><a href="#set_env">Java VM Settings</a></li>
+                            <li><a href="#match">License Matching Algorithm</a></li>
+                            <li><a href="#license_name">License Naming Convention</a></li>
+							<li><a href="#adding_licenses">Adding new licenses</a></li>
+							<li><a href="#delete_edit">Deleting/editing added licenses</a></li>
+							<li><a href="#license_compatibilities">Viewing license compatibilities</a></li>
+							<li><a href="#supported_formats">Supported source file formats</a></li>
+                         <li><a href="#subversion">Checking Out Files From Subversion</a></li>
+                            <li><a href="#cvs">Checking Out Files From CVS</a></li>
+                        </ol>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p class="heading1"><a name="start"></a>1. Starting the Application</p>
+        <p class="heading2"><a name="start_1"/>1.1 Start Command Line Operation</p>
+        <table width="600px" border="0" cellpadding="1" cellspacing="1">
+            <tr class="row_grey">
+                <td>
+                    <ol type="square">
+                        <li class="normal">
+                            <p class="command_txt"><b>Under Windows: </b></p>
+                            <p class="command_txt">click <b>Start</b> -> click <b>Run</b> -> input <b>cmd</b> and click <b>OK</b></p>
+                            <p class="command_txt">go to the directory where you unpack the downloaded package:</p>
+                            <p class="command_txt">in command line type <b>oslccli</b>, then press <b>enter</b>. For example: <b>oslccli -r test_sources.zip</b></p>
+                            <p class="command_txt">or type <b>java -jar oslc.jar [arguments]</b> then press <b>enter</b>. Run with "-h" argument to see the commandline help screen</p>
+                        </li>
+                        <li>
+                            <p class="command_txt"><b>Under Linux or MAC: </b></p>
+                            <p class="command_txt">Start a terminal screen</p>
+                            <p class="command_txt">go to the directory where you unpack the downloaded package</p>
+                            <p class="command_txt">type <b>./oslccli</b> then press <b>enter</b>. For example: 
+<b>./oslccli -r test_sources.zip</b></p>
+                            <p class="command_txt">or type <b>java -jar oslc.jar [arguments]</b> then press <b>enter</b>. Run with "-h" argument to see the commandline help screen</p>
+                        </li>
+                    </ol>
+                </td>
+            </tr>
+        </table>
+        <p class="cmd">Back to <a href="#top"/>Top</p>
+        
+        <p class="heading2"><a name="start_2"/>1.2 Start GUI Application</p>
+        <table width="600px" border="0" cellpadding="1" cellspacing="1">
+            <tr class="row_grey">
+                <td>
+                    <ol type="square">
+                        <li class="normal">
+                            <p class="command_txt"><b>Under Windows</b></p>
+                            <p class="command_txt">go to the directory where you unpack the downloaded package, and double click <b>oslcgui.bat</b></p>
+                            <p class="command_txt">or type <b>java -jar oslc.jar</b>, then press <b>enter</b></p>
+                        </li>
+                        <li class="normal">
+                            <p class="command_txt"><b>Under Linux or MAC</b></p>
+                            <p class="command_txt">Start a terminal screen</p>
+                            <p class="command_txt">go to the directory where you unpack the downloaded package</p>
+                            <p class="command_txt">type <b>./oslcgui</b>, then press <b>enter</b></p>
+                            <p class="command_txt">or type <b>java -jar oslc.jar</b>, then press <b>enter</b></p>
+                        </li>
+                    </ol>
+                </td>
+            </tr>
+        </table>
+        <p class="cmd">Back to <a href="#top"/>Top</p>
+        
+        <p class="heading1"><a name="command"></a>2. Commandline Guide</p>
+        <p class="normal">Basic usage: <b>oslccli.bat  [options]   [source file / directory / file package]</b></p>
+        <p><span class="command_txt">Current supported package types: <b>zip</b>, <b>jar</b>, <b>tar</b>, <b>tar.gz</b>, <b>tgz</b></span></p>
+        <br/><br/>
+        
+        <table border="0" cellpadding="1" cellspacing="1" width="600px" class="table_txt">
+            <thead class="border_blue">
+                <tr>
+                    <th width="10%" align="left">Option</th>
+                    <th width="90%" align="left">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>-h</td>
+                    <td>List all the command line options (help text)</td>
+                </tr>
+                <tr class="row_grey">
+                    <td>-r</td>
+                    <td>Output file references</td>
+                </tr>
+                <tr>
+                    <td>-s</td>
+                    <td>Show a summary of found licenses</td>
+                </tr>
+                <tr class="row_grey">
+                    <td>-t</td>
+                    <td>Show found tags</td>
+                </tr>
+                <tr>
+                    <td>-v</td>
+                    <td>Verbose mode for output</td>
+                </tr>
+                <tr class="row_grey">
+                    <td>-v -v</td>
+                    <td>More verbose mode for output</td>
+                </tr>
+                <tr>
+                    <td>-x</td>
+                    <td>PATH: ignore PATH inside package (if your package has a directory 'docs/', use "-x docs" to ignore it from processing)			</td>
+				</tr>
+				<tr class="row_grey">
+					<td>-c</td>
+                    <td>Show copyrights</td>
+				</tr>
+				<tr>
+					<td>-p</td>
+                    <td>FILENAME: Make a pdf or rtf report of the desired outputs FILENAME must end with .pdf of .rtf</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p class="cmd">Back to <a href="#top"/>Top</p>
+        
+        <p class="heading1"><a name="gui"></a>3. GUI Guide</p>
+        <p class="heading2"><a name="gui_1"/>3.1 Open a Source file / Directory / Source package</p>
+        <p class="normal">The source file can be opened in 2 ways:</p>
+        <p><img alt="Open a source file, a directory, or a package" src="imgs/open_file_package1.jpg"/></p>
+        <p><img alt="Open a source file, a directory, or a package" src="imgs/open_file_package2.jpg"/></p>
+        <p class="cmd">Back to <a href="#top"/>Top</p>
+        
+        <p class="heading2"><a name="gui_2"/>3.2 The Summary Pane</p>
+        <p class="normal">After opening a source package, the Overview pane shows the summary of the package</p>
+        <ul type="square" title="Overview pane" class="normal">
+            <li>The number of source file in the package</li>
+            <li>The number of all files in the package</li>
+            <li>Distinct licenses found</li>
+            <li>The number of local / reference license conflicts found</li>
+            <li>The number of global license conflicts found</li>
+        </ul>
+        <p><img alt="The Summary window with detailed information" src="imgs/summary_window.jpg"/></p>
+        <p class="normal">Click on <b>Details</b>, then the summary window prompts with the following information:</p>
+        <ul type="square" title="Detailed summary window" class="normal">
+            <li>The list of source files identified under each license</li>
+            <li>The list of global conflicts found in the package</li>
+			<li>The list of files that have a copyright and the copyright holder of each file</li>
+			<li>The list of files that do not have a copyright</li>
+			<li>The list of copyright holders and the number of files for each copyright holder</li>
+        </ul>
+        <p><img alt="The detailed information on the license match" src="imgs/detail_license_match.jpg"/></p>
+        <p><img alt="The detailed information on the license conflicts" src="imgs/detail_license_conflicts.jpg"/></p>
+        <p><img alt="The detailed information on the license copyrights" src="imgs/detail_license_copyrights.jpg"/></p>
+        <p><img alt="The detailed information on the non-copyrighted files" src="imgs/detail_license_noncopyrights.jpg"/></p>
+        <p><img alt="The detailed information on the copyright holders " src="imgs/detail_license_holders.jpg"/></p>
+        <p class="cmd">Back to <a href="#top"/>Top</p>
+        
+        <p class="heading2"><a name="gui_3"/>3.3 The Source Tree Browser Pane</p>
+        <p><img alt="The source file pane" src="imgs/source_tree_pane.jpg"></p>
+        <p class="normal">The filter list box contains the filtering options to display the source tree and its related information:</p>
+        <ul title="The filters of the source tree pane" style="square" class="normal">
+            <li><b>All files</b> - shows all the files in the source package</li>
+            <li><b>Conflicting files</b> - shows all the source files with license conflicts. An icon is displayed for the directories and the files that has conflicts. The imports that the current file is conflicting with is shown after <b>red</b> arrows. </li>
+            <li><b>Licensed files</b> - shows all the source files with license information identified. User can also filter source files based on their license type.</li>
+            <li><b>Missing License</b> - shows all the source files with no license identified</li>
+        </ul>
+        <p><img src="imgs/license_conflicts_sourcetree_pane.jpg" alt="Indication of license conflicts"/></p>
+        <p class="normal"><b>Show References</b> - when this option is selected, the source file imports and includes are displayed in the source tree.</p>
+        <p class="normal">In Java source file view: 
+        <ul style="square">
+        <li><font color="green"><b>Green arrow</b></font> means that the link can be followed by <b>double click</b> on the references.</li>
+        <li><font color="yellow"><b>Yellow arrow</b></font> means the imported file is outside the package. </li>
+        <li><font color="red"><b>Red arrow</b></font> means that there is a license conflict with the imported file.</li>
+        </ul></p>
+        <p class="cmd">Back to <a href="#top"/>Top</p>
+        
+        <p class="heading2"><a name="gui_4"/>3.4 The File Display Pane</p>     
+        <p class="normal">The file display pane provides the following features:</p>
+        <ul class="normal" style="square" title="Features provided by the file display pane">
+            <li>Highlighting the license match text, see mark <b>(1)</b></li>
+            <li>Show license matching percentage against the original license text, see mark <b>(2)</b></li>
+            <li>Show license matching details, see mark <b>(3)</b></li>
+            <li>Show the license conflict detailed information with imports if exists, see mark <b>(4)</b></li>
+        </ul>
+        <p><img src="imgs/source_file_viewing.jpg" alt=""/></p>
+        <p class="normal">When <b>Details</b> is available, click on it to see detailed information in the prompt window.</p>
+        <p><img src="imgs/license_detail_1.jpg" alt="The detailed matching information as color to matched license, etc"/></p>
+        <p><img src="imgs/license_detail_2.jpg" alt="The free form field, such as author and year, is indentified and displayed"/></p>
+        
+        <p class="bold">To close a tab or print a file, right click on the tab</p>
+        <p><img src="imgs/Print_close_tab_function.jpg" alt="Options for printing the file, or closing the tab" /></p>
+        <p class="cmd">Back to <a href="#top"/>Top</p>
+        
+        <p class="heading2"><a name="gui_5"/>3.5 Other Options</p>
+        <p class="bold">File Operations:</p>
+        <p><img src="imgs/Other_option_2.jpg" alt="File operation options" /></p>
+        <p class="bold">View Options:</p>
+        <p class="bold"><img src="imgs/Other_option_1.jpg" alt="displaying the overview pane, and wordwrap option in displaying the files" /></p>
+        <p class="bold">Tools Pages:</p>
+		<p><img src="imgs/Other_option_4.jpg" alt="The different tools for this application" /></p>
+		<p class="bold">Help Pages:</p>
+        <p><img src="imgs/Other_option_3.jpg" alt="The Help page and About for this application" /></p>
+        
+        
+        <p class="cmd">Back to <a href="#top"/>Top</p>
+        
+        <p class="heading1"><a name="set_env"></a>4. Java VM Settings</p>
+        <p class="normal">When processing large software packages (tens of thousands of files), it might be usefull to increase the memory allocated for Java virtual machine.</p>
+        <p class="normal">Memory allocation can be set by following arguments:</p>
+        <table width="600px" border="0" cellpadding="10" cellspacing="1">
+            <tr class="row_grey">
+                <td>
+                    <p class="command_txt"><b>java -Xms512M -Xmx512M</b></p>
+                </td>
+            </tr>
+        </table>
+        <p class="normal">Where 512 can be increased if necessary.</p>
+        
+        <p class="cmd">Back to <a href="#top"/>Top</p>
+        
+        <p class="heading1"><a name="match">5. License Matching Algorithm</a></p>
+        <p class="normal">The program finds license matches by identifying the longest common substring 
+        between source file's comments and a known license text. A match is reported to the user if it is 
+        length is longer that 10 words and 10% of the license text and if a better match in some other 
+        license is not overlapping the match. Non-alphanumeric characters are ignored in license matching. 
+        Match confidence-% is calculated by dividing the length of the longest exact match by license text length. </p>
+        
+        <p class="normal">Forbidden phrases (identified by -f in the license name) are reported if they have a full
+        (100%) match. They are not reported if all licenses found in the file contain the
+        forbidden phrase as part of their normal license text. </p>
+
+        <p class="normal">Exceptions to a license (identified by -m in the license name) are reported if exception
+        text is found and if the parent license is also found in a same source file. </p>
+       
+        <p class="cmd">Back to <a href="#top"/>Top</p>
+        
+        <p class="heading1"><a name="license_name">6. License Naming Convention</a></p>
+        <p class="normal">License files must follow the naming convention below to make itself correctly recognized:</p>
+        <table width="600px" border="0" cellpadding="10" cellspacing="1">
+            <tr class="row_grey">
+                <td>
+                    <p class="command_txt"><b>name [-version] [-only|]-[l|s|m|f|k][-module_name].[txt|meta]</b></p></br>
+                    <p class="command_txt">where:</p>
+                    <p class="command_txt">only	= usage of future versions of the license is not permitted (for example: gpl-2.0-only)</p>
+                    <p class="command_txt">s = short version of the license text (typically located inside source files)</p>
+                    <p class="command_txt">m = file contains a license module (exception)</p>
+                    <p class="command_txt">f = file contains a forbidden phrase</p>
+                    <p class="command_txt">k = file contains a linux kernel-specific license</p>
+                </td>
+            </tr>
+        </table>
+        
+        <p class="cmd">Back to <a href="#top"/>Top</p>
+        <p class="heading1"><a name="adding_licenses">7. Adding new licenses</a></p>
+        <p class="normal">When adding licenses through the GUI interface, you dont need to care about the license naming conventions.
+		All the necessary naming conventions are build in to the code.</p>
+		<p class="normal">(1) Write license full name to the "License name" field.</p>
+		<p class="normal">(2) Write the license text used to recognize licenses to the "License text" field.</p>
+		<p class="normal">(3) Select the type of the license from the "License type" selection box. If you are unsure of what to use, just go with the normal (default) option.</p>
+		<p class="bold">Select "Add new license..." from the "Tools" menu:</p>
+		<p><img src="imgs/tools_options_1.jpg" alt="Tools options"/></p>
+		<p class="bold">Writing license name and text information:</p>
+        <p><img src="imgs/add_new_license_1.jpg" alt="Add new license: license text"/></p>
+		<p class="bold">Selecting compatible licenses:</p>
+		<p><img src="imgs/add_new_license_2.jpg" alt="Add new license: compatibility selections"/></p>
+		<p class="bold">Confirmation dialog:</p>
+		<p><img src="imgs/add_new_license_3.jpg" alt="Add new license: confirmation"/></p>
+        <p class="cmd">Back to <a href="#top"/>Top</p>
+				
+		<p class="heading1"><a name="delete_edit">8. Deleting/editing added licenses</a></p>
+        <p class="normal">The license files are located in folder "licenses". The names of the license files added by the user begin with "user_".
+		To remove a license both .txt and .meta files of the particular license must be deleted.</p>
+		<p class="normal">To edit a license text the .txt file can be edited and to edit the license compatibility conditions the .meta file 
+		can be edited.</p>
+
+        <p class="cmd">Back to <a href="#top"/>Top</p>
+		
+		<p class="heading1"><a name="license_compatabilities">9. Viewing license compatabilities</a></p>
+        <p class="normal">Through "List compatible licenses..." feature you can view compatabilities of different licenses. Or you can see the combined compatabilities of multiple licenses or the compatabilities from all the licenses in the currently opened package.</p>
+		<p class="bold">Select which license compatabilities you want to view:</p>
+		<p><img src="imgs/list_compatible_licenses.jpg" alt="Select the license"/></p>
+		<p class="bold">See the results on the right hand side:</p>
+        <p><img src="imgs/list_compatible_licenses_2.jpg" alt="View the results"/></p>
+		<p class="bold">Select multiple licenses for combined compatabilities, note the dialog if licenses are incompatible:</p>
+		<p><img src="imgs/list_compatible_licenses_3.jpg" alt="Select multiple licenses"/></p>
+		<p class="bold">Use licenses from the current opened package and see the results, note the dialog if licenses are incompatible:</p>
+		<p><img src="imgs/list_compatible_licenses_4.jpg" alt="Select the current opened package"/></p>
+        
+        <p class="cmd">Back to <a href="#top"/>Top</p>
+		
+		<p class="heading1"><a name="supported_formats">10. Supported file formats</a></p>
+		    <ul type="square" title="Supported file formats" class="normal">
+            <li>C code files (.c)</li>
+            <li>C header files (.h)</li>
+            <li>C++ code files (.cc)</li>
+            <li>C++ header files (.hh)</li>
+            <li>Java files (.java)</li>
+			<li>JavaScrips files(.js)</li>
+			<li>PHP files (.php)</li>
+			<li>Python files (.py)</li>
+        </ul>
+		
+        <p class="cmd">Back to <a href="#top"/>Top</p>
+	<p class="heading1"><a name="subversion">11. Checking Out Files From Subversion</a></p>
+	  <p class="bold">To check out files from a remote repository:</p>
+         <p class="normal">1. Choose File > Checkout From SVN from the main menu. The Subversion Checkout wizard opens.</p>
+         <p class="normal"> 2. In the first panel of the wizard, enter a URL that contains the connection protocol and the location of the repository.
+          <ol type="square">
+               <li class="normal">
+               <p class="command_txt">For protocols such as http://, https://, and svn://, enter your required username and password for repository access in the User and Password fields.</p>	  
+              </li></ol>
+            <p class="normal">
+The OSLC supports the following Subversion protocol types:</p>
+     <table border="0" cellpadding="1" cellspacing="1" width="600px" class="table_txt">
+            <thead class="border_blue">
+                <tr>
+                    <th width="10%" align="left">Protocol</th>
+                    <th width="70%" align="left">Access method</th>
+                    <th align="left">Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>file</td>
+                    <td>Direct repository access (on local disk)</td>
+                    <td>file:///repository_path</td>
+                </tr>
+                 <tr class="row_grey">
+                    <td>http</td>
+                    <td>Access via HTTP protocol</td>
+                    <td>http://hostname/repository_path</td>
+                </tr>
+                   <tr>
+                    <td>https</td>
+                    <td>Access via HTTP protocol with SSL encryption</td>
+                    <td>https://hostname/repository_path</td>
+                </tr>
+               <tr class="row_grey">
+                    <td>svn</td>
+                    <td>Access via custom protocol to an svnserve server</td>
+                    <td>svn://hostname/repository_path</td>
+                </tr>
+                   <tr>
+                    <td>svn+ssh</td>
+                    <td>Access via SVN protocol through SSH tunnel</td>
+                    <td>svn+ssh://hostname/repository_path</td>
+                </tr>
+
+           
+            </tbody>
+     </table>
+     <p class="normal">3. Specify the folder that you want to check out in the Repository Folder(s) field or click the Browse button to choose from a list of all folders in the repository.</p>
+     <p class="normal">4. Specify the local folder into which you want to check out the selected folders. Alternately, you can click the Browse button to navigate to the desired directory on your system</p>
+      <p class="normal">5. Click Finish to check out the files. When checkout is complete click OK. Package is opened like a normal filepackage. </p><p class="cmd">Back to <a href="#top"/>Top</p>
+
+
+    <p class="heading1"><a name="cvs">12. Checking Out Files From CVS</a></p>
+    <p class="bold">To check out files from a remote repository:</p>
+    <p class="normal">1. Choose File > Checkout From CVS from the main menu. The CVS Checkout wizard opens.</p>
+ <p class="normal"> 2. On the first page of the CVS Checkout wizard, specify the location of the CVS repository.
+ 
+</br> The OSLC supports the following CVS root type:
+  
+ <ol type="square" >
+               <li class="normal">
+               <p class="command_txt">
+pserver. For connecting to pserver repositories. :pserver:username@hostname:/repository_path</p>	  
+              </li></ol></p>
+ <p class="normal">3. On the Module to Checkout page, specify the modules you want to check out in the Module field or click the Browse button to choose from a list of all modules in the repository. Note that if you do not specify a module, the entire repository will be checked out. </p>
+<p class="normal">4. Specify the local working directory into which you want to check out the selected modules or branches. Alternately, you can click the Browse button to navigate to the desired directory on your system.</p>
+
+<p class="normal">5. Click finish to checkout the files. When checkout is complete click OK. The package is opened like a normal filepackage. </p>
+
+<p class="cmd">Back to <a href="#top"/>Top</p>
+		
+    </body>
+</html>
