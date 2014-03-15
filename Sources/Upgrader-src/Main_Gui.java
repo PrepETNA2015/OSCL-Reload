@@ -7,9 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
 import java.net.*;
-import java.util.Enumeration;
 import java.util.zip.ZipEntry;
-import java.util.zip.ZipFile;
 import java.util.zip.ZipInputStream;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -25,7 +23,6 @@ import javax.swing.JTextArea;
 public class Main_Gui extends JFrame{
 
     private Thread worker;
-    private final String root = "update/";
     private final String path; 
     private JTextArea outText;
     private JButton cancle;
@@ -37,10 +34,9 @@ public class Main_Gui extends JFrame{
     
 
      public Main_Gui() throws IOException {
-       System.out.println("main gui hau");
         initComponents();
         outText.setText("Contacting Download Server...");
-        path = new File(".").getCanonicalPath();
+        path = new File("..").getCanonicalPath();
         download();
     }
     private void initComponents() {
@@ -87,12 +83,10 @@ public class Main_Gui extends JFrame{
 
     private void download()
     {
-        System.out.println("download");
         worker = new Thread(
         new Runnable(){
             public void run()
             {
-                System.out.println("runable");
                 try {                    
                     downloadFile(getDownloadLinkFromHost());
                     unzip();
@@ -109,7 +103,7 @@ public class Main_Gui extends JFrame{
     }
     private void launch()
     {
-        String[] run = {"java","-jar","update app.jar"};
+        String[] run = {"java","-jar","OSLC.jar"};
         try {
             Runtime.getRuntime().exec(run);
         } catch (Exception ex) {
@@ -122,6 +116,7 @@ public class Main_Gui extends JFrame{
     private void copyFiles(File f,String dir) throws IOException
     {
         File[]files = f.listFiles();
+        outText.setText(outText.getText()+"\nCopy files");
         for(File ff:files)
         {
             if(ff.isDirectory()){
@@ -160,7 +155,7 @@ public class Main_Gui extends JFrame{
         int size;
         byte[] buffer = new byte[BUFFER_SIZE];
 
-
+        outText.setText(outText.getText()+"\nUnzip");
         try {
             File f = new File(pathToExtract);
             if(!f.isDirectory()) {
@@ -207,7 +202,7 @@ public class Main_Gui extends JFrame{
         catch (Exception e) {
             e.printStackTrace();
         }
-        
+        outText.setText(outText.getText()+"\nUnzip finished");
     }
     private void downloadFile(String link) throws MalformedURLException, IOException
     {
@@ -228,16 +223,10 @@ public class Main_Gui extends JFrame{
     } catch (IOException e) {
         e.printStackTrace();
     }
-      
-        outText.setText(outText.getText()+"\nDownload Complete!");
-        outText.setText(outText.getText()+"\n"+path);
-        
-       
-                
+        outText.setText(outText.getText()+"\nDownload Complete!");             
     }
     private String getDownloadLinkFromHost() throws MalformedURLException, IOException
     {
-        System.out.println("get link");
         String path = "http://oslc.bravesites.com/version";
         URL url = new URL(path);
 
@@ -249,11 +238,10 @@ public class Main_Gui extends JFrame{
 
         while(c != -1) {
             c = html.read();
-            
+       
         buffer.append((char)c);
-
-        }
-      
+        }  
+        
         return buffer.substring(buffer.indexOf("[url]")+5,buffer.indexOf("[/url]"));
     }
     

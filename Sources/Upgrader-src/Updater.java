@@ -1,5 +1,6 @@
 package updater;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
@@ -8,17 +9,18 @@ import java.net.URL;
  * @author floreag
  */
 public class Updater {
-    private final static String versionURL = "http://oslc.bravesites.com/version";
-    private final static String historyURL = "http://oslc.bravesites.com/version";
+    private final static String new_verURL = "http://oslc.bravesites.com/version";
+    
     public static String getLatestVersion() throws Exception
     {
-        String data = getData(versionURL);
+        String data = getData("file://"+new File(".").getAbsolutePath()+"/version.html");
+        
         return data.substring(data.indexOf("[version]")+9,data.indexOf("[/version]"));
     }
     public static String getWhatsNew() throws Exception
     {
-        String data = getData(historyURL);
-        return data.substring(data.indexOf("[history]")+9,data.indexOf("[/history]"));
+        String data = getData(new_verURL);
+        return data.substring(data.indexOf("[version]")+9,data.indexOf("[/version]"));
     }
     private static String getData(String address)throws Exception
     {

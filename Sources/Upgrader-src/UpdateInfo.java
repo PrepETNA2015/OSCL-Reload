@@ -31,7 +31,7 @@ public class UpdateInfo extends JFrame{
 
     public UpdateInfo(String info, String info2) {
         initComponents();
-        infoPane.setText("Update version "+info+" to "+info2);
+        infoPane.setText("Update version "+info2+" to "+info);
     }
 
     private void initComponents() {
@@ -78,15 +78,12 @@ public class UpdateInfo extends JFrame{
     }
     private void update()
     {
-       String[] run = {"java","-jar","update.jar"};
 	        try {
-	            //Runtime.getRuntime().exec(run);
+                    
                     Main_Gui.start();
 	        } catch (Exception ex) {
-                    System.out.println("Not Update");
 	            ex.printStackTrace();
-	        }
-	        //System.exit(0);
+	        }    
     }
 
 }

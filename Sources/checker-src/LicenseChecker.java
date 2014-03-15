@@ -2111,7 +2111,6 @@ public class LicenseChecker {
 	        try {
 	            Runtime.getRuntime().exec(run);
 	        } catch (Exception ex) {
-                    System.out.println("Not Update");
 	            ex.printStackTrace();
 	        }
 		//TODO: change start command from oslc2cli to oslccli
