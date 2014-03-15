@@ -22,7 +22,10 @@ import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
+import java.lang.reflect.InvocationTargetException;
 import java.net.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import javax.swing.JButton;
@@ -46,7 +49,7 @@ public class Main_Gui extends JFrame{
     private JScrollPane sp;
     private JPanel pan1;
     private JPanel pan2;
-    
+   
     
 
      public Main_Gui() throws IOException {
@@ -55,6 +58,7 @@ public class Main_Gui extends JFrame{
         path = new File("..").getCanonicalPath();
         download();
     }
+     
     private void initComponents() {
         System.out.println("init components");
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -76,7 +80,23 @@ public class Main_Gui extends JFrame{
         launch.addActionListener(new ActionListener(){
 
             public void actionPerformed(ActionEvent e) {
-                launch();
+                try {
+                    try {
+                        launch();
+                    } catch (NoSuchFieldException ex) {
+                        Logger.getLogger(Main_Gui.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (IllegalArgumentException ex) {
+                        Logger.getLogger(Main_Gui.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (IllegalAccessException ex) {
+                        Logger.getLogger(Main_Gui.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (NoSuchMethodException ex) {
+                        Logger.getLogger(Main_Gui.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (InvocationTargetException ex) {
+                        Logger.getLogger(Main_Gui.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                } catch (IOException ex) {
+                    Logger.getLogger(Main_Gui.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
         pan2.add(launch);
@@ -117,15 +137,42 @@ public class Main_Gui extends JFrame{
         });
         worker.start();
     }
-    private void launch()
+    
+    private void launch() throws IOException, NoSuchFieldException, IllegalArgumentException, IllegalAccessException, NoSuchMethodException, InvocationTargetException
     {
         String[] run = {"java","-jar","OSLC.jar"};
+        /*try {
+            Runtime.getRuntime().exec(run);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        System.exit(0);*/
+        java.lang.management.RuntimeMXBean runtime = 
+    java.lang.management.ManagementFactory.getRuntimeMXBean();
+java.lang.reflect.Field jvm = runtime.getClass().getDeclaredField("jvm");
+jvm.setAccessible(true);
+sun.management.VMManagement mgmt =  
+    (sun.management.VMManagement) jvm.get(runtime);
+java.lang.reflect.Method pid_method =  
+    mgmt.getClass().getDeclaredMethod("getProcessId");
+pid_method.setAccessible(true);
+
+int pid = (Integer) pid_method.invoke(mgmt);
+        Runtime rt = Runtime.getRuntime();
+  if (System.getProperty("os.name").toLowerCase().indexOf("windows") > -1)
+    {    
+     rt.exec("taskkill " +(pid - 10));
+    }
+   else
+    {
+     rt.exec("kill -9 " +(pid - 10));
+    }
         try {
             Runtime.getRuntime().exec(run);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-        System.exit(0);
+  System.exit(0);
         
     }
     

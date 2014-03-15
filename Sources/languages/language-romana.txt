@@ -1,0 +1,492 @@
+#
+Opening file:Deschid fisier
+#
+File opened:Fisier deschis
+#
+Begin processing files.:Procesez fisierele.
+#
+Processing finished.:Procesul a fost terminat.
+#
+Processing cancelled.:Procesul a fost oprit.
+#
+Do you want to open a new package? The current one will close.:Vrei sa deschizi un alt pachet? Cel deja deschis va fi inchis.
+#
+Confirm package open:Confirma deschiderea pachetului
+#
+Unpacking files.:Despachetarea fisierelor.
+#
+File contents cannot be shown:Continutul fisierelor nu poate fi afisat
+#
+Done:Gata
+#
+Error inserting file to a tab:Eroare la inserarea fisierelor in tablou
+#
+Could not generate a tree from the chosen file/dir:Nu poate fi generat un descriptiv pentru fisier/dir ales
+#
+Choose Criteria:Alege Criteriul
+#
+Choose License:Alege Licenta
+#
+Choose Match%: Potrivire %
+#
+File not found:Fisierul nu a fost gasit
+#
+Referred file cannot be shown:Fisierul de referinta nu poate fi aratat
+#
+File cannot be shown:Fisierul nu poate fi aratat
+#
+File is not viewable:Fisierul nu este vizibil
+#
+Close File:Alege fisierul
+#
+Print File:Printeaza fisierul
+#
+Preferences:Preferinte
+#
+OK:OK
+#
+Nothing here yet...:Nimic aici inca...
+#
+Processing files:Procesez fisierele
+#
+Please wait.:Va rog asteptati.
+#
+Details:Detalii
+#
+License:Licenta
+#
+Count:Numara
+#
+Matches:Potriviri
+#
+License 1:Licenta 1
+#
+Icon:Iconita
+#
+License 2:Licenta 2
+#
+Conflicts (global):Conflicte (global)
+#
+Open Source License Checker:Deschide Sursele Verificatorului de Licente 
+#
+version 3.0, 2008:versiunea 3.0 , 2008
+#
+All:toate
+#
+OSLC Help:OSLC Ajutor
+#
+OSLC v3.0:OSLC v3.0
+#
+Overview:Prezentare
+#
+Source Files:Fisiere sursa
+#
+All Files:Toate Fisierele
+#
+Distinct Licenses:Licente Distincte
+#
+Conflicts (reference):Conflicte (referinta)
+#
+Details...:Detalii...
+#
+Filter:Filtru
+#
+Conflicting Files:Fisiere in conflict
+#
+Missing Licenses:Licente Lipsa
+#
+Licensed Files:Fisiere Licentiate
+#
+Uncertain Licenses:Licente Nesigure
+#
+Show References:Arata Referinte
+#
+Choose...:Alege...
+#
+Close:Inchide
+#
+Close All:Inchide Toate
+#
+Print...:Printeaza...
+#
+Quit:Iesire
+#
+View: Afisaj
+#
+Show Overview:Arata prezentare
+#
+Word Wrap:Word Wrap
+#
+Options:Optiuni
+#
+Preferences:Preferinte
+#
+Help:Ajtor
+#
+Help Contents:Ajutor Continut
+#
+File you selected does not exist:Fisierele pe care le-ati ales nu exista
+#
+(self):(sigur)
+#
+Package Overview:Prezentare pachet
+#
+Ready:Gata
+#
+File:Fisier
+#
+Open...:Deschide...
+#
+Name of the license here:Numele licentei aici
+#
+License text here:Textul licentei aici
+#
+File name:Numele Fisierului
+#
+File path:Calea catre fisier
+#
+Copyright holder:Titularul dreptului de autor
+#
+Copyrighted files:Fisierele dreptului de autor
+#
+Number of files:Numarul de fisiere
+#
+Add new license...:Adauga o noua licenta
+#
+Next:Urmatorul
+#
+Select compatible licenses...:Selecteaza licentele compatibile...
+#
+Finish:Terminat
+#
+List of all licenses:Lista tuturor licentelor
+#
+Select a license and press button to view the compatible licenses.:Selecteaza o licenta si apasa butonul pentru a vedea licentele compatibile
+#
+List compatible licenses:Listeaza licentele compatibile
+#
+Copyrighted Files:Fisierele pentru dreptul de autor
+#
+Copyright Holders:Titularii dreptului de autor
+#
+Tools:Unelte
+#
+List compatible licenses...:Listeaza licentele compatibile...
+#
+License with that name already exists!:O licenta cu acelasi nume exista deja
+#
+Error:Eroare
+#
+Create %s license?:Creaza %s licente?
+#
+Add new license?:Adaugi o noua licenta?
+#
+no row selected:Nici o coloana selectata
+#
+SELECTED LICENSE %s HAS NO COMPATIBLE LICENSES.:LICENTA %s SELECTATA NU ARE NICI O ALTA LICENTA COMPATIBILA.
+#
+Chosen license has no compatible licenses:Licenta aleasa nu are nici o alta licenta compatibila
+#
+File you selected does not exist:Fisierul ales nu exista
+#
+Select language:Selecteaza limba
+#
+Create new language file:Creaza o alta limba
+#
+This file is missing a license:Acestui fisier ii lipseste o licenta
+#
+This file corresponds to:Acest fisier corespunde la:
+#
+several licenses:mai multe licente
+#
+Error highlighting:Eroare la subliniere
+#
+This file is not a source file:Acest fisier nu este un fisier sursa
+#
+License %s conflicts with %s in %s:Licenta %s este in conflict cu %s in %s
+#
+Details:Detalii
+#
+File Overview:Prezentarea Fisierului
+#
+Legend:Legenda
+#
+License:Licenta
+#
+Match%:Potrivire%
+#
+Matches:Potriviri
+#
+Tag:Tag
+#
+Value:Valoare
+#
+Free Fields:Campuri Libere
+#
+Details:Detalii
+#
+This file has license conflicts (click to show):Acest fisier are conflicte de licenta
+#
+No files:Nici un fisier
+#
+Max %:Maxim %
+#
+Global:Global
+#
+License 1:Licenta 1
+#
+Conflict:Conflict
+#
+License 2:Licenta 2 
+#
+less than %1.0f%% match:mai putin de %1.0din%% potrivire
+#
+All:Toate
+#
+Reference to the java standard library:Referinta la libraria java standard 
+#
+Package declaration don't match with source file path:Declaratia pachetului nu se potriveste cu fisierele sursa
+#
+Package declaration missing:Lipseste declaratia pachetului
+#
+Empty import declaration:Declaratia de import este goala
+#
+Empty declaration:Declaratie goala
+#
+Reference points above root directory:Puncte de referinta deasupra directorului radacina
+#
+Reference to www document:Referinte la www document
+#
+Reference includes variable:Referintele include variabile
+#
+Reference include variables e.g. path:Referintele include variabile ex calea
+#
+Empty include declaration:Declaratie goala
+#
+Abreviation not found.:Abreviatia nu a fost gasita
+#
+License directory file not found:Folderul cu licente nu a fost gasit
+#
+Found license meta file:S-au găsit fișier de licență meta
+#
+Loading license text file:Încărcare fisierul de licenta
+#
+Error while opening license text file:Eroare la deschiderea fisierului text de licenta
+#
+Loaded license:Licenta incarcata
+#
+License text file:Fisierul text de licenta
+#
+doesn't exist:nu exista
+#
+is null while its meta exists.:este nul in timp ce meta care ii apartine exista
+#
+Error while loading license file:Eraoare la incarcarea licentei
+#
+License database loaded:Baza de licente incarcata
+#
+Browse repository folders:Cauta in folderele de depozitare
+#
+Cancel:Anuleaza
+#
+Choose the folder(s) you want to checkout from the repository.:Alege folderul pe care doresti sa il scoti din depozit
+#
+Help:Ajutor
+#
+SVN checkout:SVN checkout
+#
+Checked out revision:Verificare de revizuire
+#
+SVN command failed:Comanda SVN nu a reusit
+#
+CVS checkout:CVS checkout
+#
+Checking out...:Verificare...
+#
+Checkout cancelled:Checkout anulat
+#
+checkout failed:Checkout esuat
+#
+Finish:Terminat
+#
+Next:Urmatorul
+#
+Back:Inapoi
+#
+CVS root:Radacina CVS
+#
+specify the location of CVS repository defined by CVS root.:specifica locatia depozitului CVS definita de radacina CVS
+#
+Stop:Stop
+#
+Password:Parola
+#
+Authentication in progress...:Autentificare in progres...
+#
+Edit:Editare
+#
+Module to checkout:Modulul pentru checkout
+#
+Specify the CVS module and branch  to checkout from CVS repository.:Specifica modulul CVS si ramura pentru a face checkout-ul 
+#
+Module:Modul
+#
+Branch:Ramura
+#
+(empty means all modules):(gol inseamna toate modulele)
+#
+Browse...:Cauta...
+#
+Specify the local folder to checkout module into.:Specifica folderul local pentru a extrage modulul inauntru
+#
+Local folder:Folder local
+#
+please check username, password and repository:va rugam verificati nickname, parola si depozitul
+#
+Error:Eroare
+#
+Browse CVS repository:Cauta in depozitul CVS
+#
+Aliases:Pseudonime
+#
+Pending...:In asteptare...
+#
+Repository contents:Continutul depozitului
+#
+Select All:Selecteaza pe toate
+#
+Copy:Copiere
+#
+Paste:Lipire
+#
+Subversion repository:Subversiunea depozitului
+#
+Specify the location of Subversion repository.:Specifica locatia depozitului de subversiune
+#
+Repository URL:URL depozit
+#
+Username:Nickname
+#
+(empty means anonymous access):(gol inseamna acces anonim)
+#
+Connecting to Subversion repository...:Conectare la subversiunea depozitului 
+#
+hostname/repository_path:numele titularului/depozit
+#
+Specify the folder to checkout from Subversion repository.:Specifica foldelur pentru checkout 
+#
+Repository Folder(s):Folderul sau folderele depozitului
+#
+Repository revision:Revizuire depozit
+#
+Search:Cauta
+#
+Specify the local folder to checkout folders into.:Specifica folderul local pentru checkout
+#
+repository_path:calea catre depozit
+#
+action cancelled by user:actiunea anulata de catre utilizator
+#
+SVN command failed:Comanda SVN esuata
+#
+Apply:Aplica
+#
+Enter license name and text:Tasteaza numele licentei si textul
+#
+Select compatible licenses:Selecteaza licente compatibile
+#
+Add new license:Adauga o noua licenta
+#
+License name:Numele licentei
+#
+License text:Textul licentei
+#
+License type:Tipul licentei
+#
+Normal:Normal
+#
+Short version:Versiune scurta
+#
+Long version:Versiune lunga
+#
+Forbidden phrase:Fraza interzisa
+#
+License:Licenta
+#
+Compatible:Compatibila
+#
+Select all:Selecteaza toate
+#
+Select none:Selecteaza niciuna
+#
+Invert selection:Inverseaza selectia
+#
+License name is empty:Numele licentei este gol
+#
+License text is empty:Textul licentei este gol
+#
+Could not generate a tree from the chosen file/dir:Nu poate fi generat un descriptiv pentru fisier/dir ales
+#
+Close file:Alege fisierul
+#
+Print file:Printeaza fisierul
+#
+Preferences:Preferinata
+#
+Processing files:Proceseaza fisiere
+#
+Please wait:Va rugam asteptati
+#
+Details:Detalii
+#
+Package Overview:Pachetul de prezentare
+#
+Matches:Potriviri
+#
+Copyright holders:Titularii dreptului de autor
+#
+version 3.0, 2009:versiunea 3.0, 2009
+#
+Export report...:Exporteaza raport...
+#
+Download license database...:Descarcare baza de licente...
+#
+Download license database:Descarcare baza de licente
+#
+Download:Descarcare
+#
+Status:Status
+#
+idle:inactiv
+#
+No package available:Nici un pachet disponibil
+#
+Select licenses:Selecteza licente
+#
+Compatible licenses:Licente compatibile
+#
+Use licenses of current package:Utilizeaza licentele pachetului curent
+#
+Please note that the listed licenses are compatible <br>\nindividually - not necessarily if combined:Luati in considerare ca licentele sunt compatibile <br>\individual - nu este necesar sa combini
+#
+Delete license...:Stergere licenta...
+#
+Folder(s) to checkout:Folder(e) pentru checkout
+#
+Local Folder:Folder local
+#
+Browse:Cauta
+#
+Long Version:Versiune lunga
+#
+Short Version:Versiune scurta
+#
+Forbidden phrase:Fraza interzisa
+#
+Select compatible licenses:Selecteaza licentele compatibile
+#
+Create license %s:Creaza licenta %s
+#
+Save license %s:Salveaza licenta %s
+#
+Delete license:Sterge licenta
