@@ -1,1 +1,1 @@
-/Users/lemoig_a/GIT-OSCL/OSCL-Reload/Compiled/languages/language-french.txt
+/home/floreag/Desktop/OSCL-Reload/Compiled/languages/language-romana.txt
