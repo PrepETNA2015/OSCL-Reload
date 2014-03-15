@@ -11,8 +11,10 @@ public class Main_updater {
     public static void main(String[] args) {
         
        try {
-            if (Integer.parseInt(Updater.getLatestVersion()) > 0) {
-                new UpdateInfo(Updater.getWhatsNew());
+            if (Float.parseFloat(Updater.getLatestVersion()) > 0) {
+                if (Float.parseFloat(Updater.getLatestVersion()) != Float.parseFloat(Updater.getWhatsNew()) )
+                new UpdateInfo(Updater.getWhatsNew(), Updater.getLatestVersion());
+                
             }
         } catch (Exception ex) {
             ex.printStackTrace();

@@ -29,9 +29,9 @@ public class UpdateInfo extends JFrame{
     private JPanel pan1;
     private JPanel pan2;
 
-    public UpdateInfo(String info) {
+    public UpdateInfo(String info, String info2) {
         initComponents();
-        infoPane.setText(info);
+        infoPane.setText("Update version "+info+" to "+info2);
     }
 
     private void initComponents() {
