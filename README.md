@@ -25,6 +25,8 @@ http://forge.objectweb.org/projects/oslcv3/
 
 http://inno3.org/groups/open-source-license-checker-oslc-reloaded/
 
+http://vvlibri.org/
+
 And read file 
 
 	-README.txt
