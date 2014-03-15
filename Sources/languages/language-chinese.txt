@@ -1,0 +1,245 @@
+Opening file:打开文件
+File opened:文件正在打开
+Begin processing files.:开始处理文件
+Processing finished.:正在处理
+Processing cancelled.:取消处理
+Do you want to open a new package? The current one will close.:打开新的程？当前将关闭
+Confirm package open:确认打开程序
+Unpacking files.:解压
+File contents cannot be shown:文件内容无法显示
+Done:完毕
+Error inserting file to a tab:错误插入文件选项卡
+Could not generate a tree from the chosen file/dir:无法从选定的文件/目录生成一个树
+Choose Criteria:选择标准
+Choose License:选择许可证
+Choose Match%:选择匹配％
+File not found:未找到文件
+Referred file cannot be shown:此文件无法显示
+File cannot be shown:文件无法显示
+File is not viewable:文件不可见
+Close File:关闭文件
+Print File:打印文件
+Preferences:选项设置
+OK:完成
+Nothing here yet...:这里还没有
+Processing files:处理文件
+Please wait.:请稍候
+Details:详细
+License:许可证
+Count:数
+Matches:符合
+License 1:许可证1
+Icon:图标
+License 2:许可证2
+Conflicts (global):冲突 (整体)
+Open Source License Checker:开源许可检查
+version 3.0, 2008:3.0版，2008
+All:全部
+OSLC Help:OSLC帮助
+OSLC v3.0:OSLC V3.0
+Overview:
+Source Files:源文件
+All Files:全部文件
+Distinct Licenses:不同的许可证
+Conflicts (reference):冲突（参考）
+Details...:详细...
+Filter:过滤器
+Conflicting Files:冲突的文件
+Missing Licenses:缺少许可证
+Licensed Files:许可文件
+Uncertain Licenses:不确定许可证
+Show References:显示参考文献
+Choose...:选择...
+Close:关闭
+Close All:全部关闭
+Print...:打印...
+Quit:退出
+View:显示
+Show Overview:展会概况
+Word Wrap:自动换行
+Options:选项
+Preferences:选项设置
+Help:帮助
+Help Contents:帮助内容
+File you selected does not exist:选择文件不存在
+(self):（个体经营）
+Package Overview:程序概览
+Ready:准备
+File:文件
+Open...:打开...
+Name of the license here:许可证的名字
+License text here:许可文本
+File name:文件名
+File path:文件路径
+Copyright holder:版权持有人
+Copyrighted files:受版权保护的文件
+Number of files:文件数
+Add new license...:添加新的许可证..
+Next:下一个
+Select compatible licenses...:选择兼容的许可证...
+Finish:完成
+List of all licenses:全部许可证名单
+Select a license and press button to view the compatible licenses.:选择许可证，然后按下按钮查看兼容的许可证
+List compatible licenses:清单兼容许可证
+Copyrighted Files:受版权保护的文件
+Copyright Holders:版权持有人
+Tools:工具
+List compatible licenses...:列出兼容的许可证...
+License with that name already exists!:许可使用该名称已存在！
+Error:错误
+Create %s license?:创建％s的许可？
+Add new license?:添加新的许可证？
+no row selected:没有选定的行
+SELECTED LICENSE %s HAS NO COMPATIBLE LICENSES.:选定的许可证％s没有兼容授权规定。
+Chosen license has no compatible licenses:选择许可证没有兼容的许可证
+File you selected does not exist:选择文件不存在
+Select language:选择语言
+Create new language file:创建新的语言文件
+This file is missing a license:此文件丢失许可证
+This file corresponds to:此文件对应
+several licenses:几个许可证
+Error highlighting:错误高亮
+This file is not a source file:此文件不是源文件
+License %s conflicts with %s in %s:与％s在％s许可证％s的冲突
+Details:详细
+File Overview:文件概述
+Legend:传说
+License:许可证
+Match%:对应%
+Matches:对应
+Tag:标签
+Value:价值
+Free Fields:免费
+Details:详细
+This file has license conflicts (click to show):该文件有许可证的冲突（点击查看）
+No files:没有文件
+Max %:最多 %
+Global:整体
+License 1:许可证1
+Conflict:冲突
+License 2:许可证2
+less than %1.0f%% match:小于％ 1.0F ％ ％匹配
+All:全部
+Reference to the java standard library:参考Java标准库
+Package declaration don't match with source file path:程序声明不与源文件路径匹配
+Package declaration missing:程序声明失踪
+Empty import declaration:空进口报关
+Empty declaration:空声明
+Reference points above root directory:参考点以上的根目录
+Reference to www document:参考到www文件
+Reference includes variable:参考包括变量
+Reference include variables e.g. path:参考包括变量例如路径
+Empty include declaration:空包括声明
+Abreviation not found.:缩写符号未找到
+License directory file not found:没有找到许可文件目录
+Found license meta file:找到程序文件
+Loading license text file:装载许可证文本文件
+Error while opening license text file:错误，同时打开许可证文本文件
+Loaded license:加载许可证
+License text file:许可文本文件
+doesn't exist:不存在
+is null while its meta exists.:是null，如果meta存在
+Error while loading license file:错误而载入许可证文件
+License database loaded:许可证数据库加载
+Browse repository folders:浏览存储库文件夹
+Cancel:取消
+Choose the folder(s) you want to checkout from the repository.:选择您想从存储库中签出文件夹
+SVN checkout:SVN检出
+Checked out revision:签出修订版
+SVN command failed:SVN命令失败
+CVS checkout:CVS签
+Checking out...:检查出...
+Checkout cancelled:检出注销
+checkout failed:检出不合格
+Finish:完成
+Next:下一个
+Back:返回
+CVS root:CVS根
+specify the location of CVS repository defined by CVS root.:指定由CVS根目录中定义的CVS存储库的位置
+Stop:停止
+Password:密码
+Authentication in progress...:验证中...
+Edit:编辑
+Module to checkout:模块检出
+Specify the CVS module and branch  to checkout from CVS repository.:从CVS存储库中指定的CVS模块和分支来结账
+Module:
+Branch:
+(empty means all modules):（空表示全部模块）
+Browse...:浏览...
+Specify the local folder to checkout module into.:指定本地文件夹检出模块插入
+Local folder:本地文件夹
+please check username, password and repository:请检查用户名，密码和资源库
+Error:错误
+Browse CVS repository:浏览CVS仓库
+Aliases:别名
+Pending...:悬而未决...
+Repository contents:资料库的内容
+Select All:全选
+Copy:副本
+Paste:粘贴
+Subversion repository:Subversion版本库
+Specify the location of Subversion repository.:指定Subversion版本库的位置
+Repository URL:库URL
+Username:用户名
+(empty means anonymous access):（空的意思是匿名访问）
+Connecting to Subversion repository...:连接到Subversion版本库...
+hostname/repository_path:主机名/则repository_path
+Specify the folder to checkout from Subversion repository.:从指定Subversion版本库中检出的文件夹
+Repository Folder(s):存储库文件夹（S ） 
+Repository revision:版本库版本
+Search:搜索
+Specify the local folder to checkout folders into.:指定本地文件夹检出文件夹到
+repository_path:则repository_path
+action cancelled by user:操作被用户取消
+SVN command failed:SVN命令失败
+Apply:适用
+Enter license name and text:输入许可证名称和文字
+Select compatible licenses:选择兼容的许可证
+Add new license:添加新的许可证
+License name:许可证名称
+License text:许可证文本
+License type:许可证类型
+Normal:正常
+Short version:短版
+Long version:长版
+Forbidden phrase:被禁止短语
+License:许可证
+Compatible:兼容
+Select all:选择全部
+Select none:无选择
+Invert selection:反转的选择
+License name is empty:许可证名称为空
+License text is empty:许可证文本是空的
+Could not generate a tree from the chosen file/dir:无法从选定的文件/目录生成一个树
+Close file:关闭文件
+Print file:打印文件
+Preferences:选项设置
+Processing files:处理文件
+Please wait:请稍候
+Details:详细
+Package Overview:包装概述
+Matches:符合
+Copyright holders:著作权人
+version 3.0, 2009:3.0版， 2009年
+Export report...:导出报表...
+Download license database...:下载许可证数据库...
+Download license database:下载许可证数据库...
+Download:下载
+Status:状态
+idle:闲置
+No package available:无封装
+Select licenses:选择许可证
+Compatible licenses:兼容的许可证
+Use licenses of current package:使用当前包的许可证
+Please note that the listed licenses are compatible <br>\nindividually - not necessarily if combined:请注意，列出的许可证是兼容的<BR>\n 独立 - 不一定，如果结合：
+Delete license...:删除许可证...
+Folder(s) to checkout:文件夹结帐
+Local Folder:本地文件夹
+Browse:浏览
+Long Version:长版本
+Short Version:短版本
+Forbidden phrase:被禁止短语
+Select compatible licenses:选择兼容的许可证
+Create license %s:创建许可证％s
+Save license %s:除许可证％S
+Delete license:删除许可证
