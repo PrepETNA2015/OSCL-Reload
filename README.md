@@ -18,9 +18,9 @@ Authors / Contributors
 ----------------------
 
 	-ZHENG Dongle -- zheng_a@etna-alternance.net
-     	-FLOREA Gheorghe -- florea_g@etna-alternance.net
-     	-WIESER Frank -- wieser_f@etna-alternance.net
-     	-LE MOIGNE Adrien -- lemoig_a@etna-alternance.net
+	-FLOREA Gheorghe -- florea_g@etna-alternance.net
+	-WIESER Frank -- wieser_f@etna-alternance.net
+	-LE MOIGNE Adrien -- lemoig_a@etna-alternance.net
 
 More info please visit the site:
 
