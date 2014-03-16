@@ -1,1 +1,1 @@
-/home/floreag/Desktop/OSCL-Reload/Compiled/languages/language-romana.txt
+/home/floreag/Desktop/OSCL-Reload/Compiled/languages/language-french.txt
